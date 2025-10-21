@@ -42,7 +42,16 @@ const SearchDropdown = (props) => {
   return (
     <div className='s-dropdown' ref={searchRef}>
         <div className="s-dropdown-con">
+
+            <div><input type="text" placeholder="Search" /></div>
             
+            <div className="searched-items-con">
+                <span>commonly searched terms</span>
+                <div className="searched-items">
+
+                </div>
+            </div>
+
         </div>
     </div>
   )
