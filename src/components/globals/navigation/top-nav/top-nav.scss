@@ -1,0 +1,40 @@
+.top-nav{
+    background: #132A50;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+
+    .top-items{
+        border: 1px solid white;
+        width: 92%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a{
+            color: #fff;
+        }
+
+        .top-items-left{
+            display: flex;
+
+            
+
+            .l-items{
+                margin-left: 60px;
+                cursor: pointer;
+
+                svg{
+                    font-size: 13px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+
+    }
+
+}
