@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import "../../../../styles/index.scss";
 import { gsap, Power2 }from "gsap";
+import { MdSearch } from "react-icons/md";
 
 const SearchDropdown = (props) => {
 
@@ -48,6 +49,24 @@ const SearchDropdown = (props) => {
             <div className="searched-items-con">
                 <span>commonly searched terms</span>
                 <div className="searched-items">
+                    <div className="searched-items-btns">
+                        <MdSearch />
+                        Pay my bill
+                    </div>
+                    <div className="searched-items-btns">
+                        <MdSearch />
+                        RhomboidPatient Portal
+                    </div>
+                    <div className="searched-items-btns">
+                        <MdSearch />
+                        Rhomboid Bridge Portal
+                    </div>
+                    <div className="searched-items-btns">
+                        <MdSearch />
+                        Change password
+                    </div>
+                    
+
 
                 </div>
             </div>

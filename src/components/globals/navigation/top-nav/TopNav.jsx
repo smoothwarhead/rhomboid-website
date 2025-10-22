@@ -3,10 +3,12 @@ import "../../../../styles/index.scss";
 import { FaUser } from "react-icons/fa6";
 import { useState } from "react";
 import SearchDropdown from "../search-dropdown/SearchDropdown";
+import AccountDropdown from "../account-dropdown/AccountDropdown";
 
 const TopNav = () => {
 
   const [openSearch, setOpenSearch] = useState(false);
+  const [openAccountDropdown, setOpenAccountDropdown] = useState(false);
 
 
   const handleSearchDropdown = () => {
@@ -15,7 +17,18 @@ const TopNav = () => {
     }else{
       setOpenSearch(true);
 
+
     }
+  }
+
+  const handleAccountDropdown = () => {
+    if(openAccountDropdown){
+      setOpenAccountDropdown(false);
+    }else{
+      setOpenAccountDropdown(true);
+
+    }
+    
   }
 
 
@@ -34,6 +47,7 @@ const TopNav = () => {
 
             <div 
               className="l-items l-account"
+              onClick={handleAccountDropdown}
 
             >
               <FaUser />
@@ -45,6 +59,7 @@ const TopNav = () => {
         
       </div>
 
+      <AccountDropdown openAccountDropdown={openAccountDropdown} />
       <SearchDropdown openSearch={openSearch} />
     </>
   )
