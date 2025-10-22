@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import "../../../../styles/index.scss";
 import { gsap, Power2 }from "gsap";
 import { Link } from "react-router";
+import LinkBtn from "../../buttons/link-btns/LinkBtn";
 
 const AccountDropdown = (props) => {
 
@@ -41,9 +42,18 @@ const AccountDropdown = (props) => {
   return (
         <div className='s-dropdown' ref={accountRef}>
             <div className="s-dropdown-con">
+                
                 <div className="a-dropdown-con">
-                    <Link>{`Patient login (RhomboidPatient login)`}</Link>
-                    <Link>{`Provider login (RhomboidBridge login)`}</Link>
+                    <LinkBtn
+                        cName="a-link-btn"
+                        text={`Patient login (RhomboidPatient login)`}
+                    />
+                    <LinkBtn
+                        cName="a-link-btn"
+                        text={`Provider login (RhomboidBridge login)`}
+                    />
+                    {/* <Link>{`Patient login (RhomboidPatient login)`}</Link>
+                    <Link>{`Provider login (RhomboidBridge login)`}</Link> */}
 
                 </div>
     

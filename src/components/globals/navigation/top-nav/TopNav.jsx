@@ -14,8 +14,10 @@ const TopNav = () => {
   const handleSearchDropdown = () => {
     if(openSearch){
       setOpenSearch(false);
+      setOpenAccountDropdown(false);
     }else{
       setOpenSearch(true);
+      setOpenAccountDropdown(false);
 
 
     }
@@ -24,8 +26,12 @@ const TopNav = () => {
   const handleAccountDropdown = () => {
     if(openAccountDropdown){
       setOpenAccountDropdown(false);
+      setOpenSearch(false);
+
     }else{
       setOpenAccountDropdown(true);
+      setOpenSearch(false);
+
 
     }
     
@@ -55,6 +61,7 @@ const TopNav = () => {
             </div>
 
           </div>
+          
         </div>
         
       </div>
