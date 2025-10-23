@@ -2,9 +2,9 @@
     width: 100%;
     height: 100px;
     background: #fff;
+    border-bottom: 0.5px solid #a6b1ac;
 
     .main-nav-con{
-        border: 1px solid red;
         width: 92%;
         height: 100%;
         margin: 0 auto;
@@ -14,8 +14,7 @@
 
        
         .main-nav-logo{
-            border: 1px solid black;
-
+            
             width: fit-content;
             height: fit-content;
             display: flex;
@@ -35,6 +34,20 @@
 
         }
 
+        .main-nav-right{
+            width: fit-content;
+            .nav-items{
+                color: #47695C;
+                margin-left: 40px;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+
+        }
         
     }
 }
