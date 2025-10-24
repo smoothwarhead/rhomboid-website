@@ -2,32 +2,51 @@ import { Link } from 'react-router';
 import NavLogo from './navLogo.png';
 import { navItems } from './nav-items';
 import MainDropdown from '../main-dropdown/MainDropdown';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { gsap, Power2, Power3 }from "gsap";
+
 
 
 
 
 const MainNav = () => {
 
-    const [openMainDropdown, setOpenMainDropdown] = useState(false);
-    const [contents, setContents] = useState(null);
   
+    const dropdownRefs = useRef([]);
+    const innerDropdownRefs = useRef([]);
 
-    const handleHoverEnter = (e) => {
 
-      setOpenMainDropdown(true);
 
-      if(e.type === 'mouseenter'){
-        // console.log(e.target.innerText);
+    const showDropdown = (index) => {
+   
 
-        const findContent = navItems.find(n => n.item.toLowerCase().includes(e.target.innerText.toLowerCase()))
+      gsap.fromTo([dropdownRefs.current[index], innerDropdownRefs.current[index]], {
+        y: -10,
+        opacity: 0,
 
-        setContents(findContent.children);
+      },{
+        y: 0,
+        opacity: 1,
+        duration: 0.4,
+        display: "block",
+        ease: Power2.easeOut
 
-      }
+      })
 
-      
+
+
     }
+
+    const hideDropdown = (index) => {
+      gsap.to(dropdownRefs.current[index], {
+        // height: 0,
+        opacity: 0,
+        duration: 0.3,
+        display: "none",
+        ease: Power2.easeIn
+      })
+    }
+
 
 
 
@@ -36,13 +55,14 @@ const MainNav = () => {
       <div className='main-nav'>
         <div className="main-nav-con">
 
-          <Link className="main-nav-logo">
-            <img src={NavLogo} alt='company-logo' />
-            <span className="main-nav-logo-text">RHOMBOID HEALTH</span>
+          <div className="main-nav-logo">
+            <Link>
+              <img src={NavLogo} alt='company-logo' />
+              <span className="main-nav-logo-text">RHOMBOID HEALTH</span>
 
-          </Link>
-
-          
+            </Link>
+          </div>
+         
 
           <div className="main-nav-right">
             {
@@ -50,11 +70,22 @@ const MainNav = () => {
                 <span
                   key={i}
                   className='nav-items'
-                  // onClick={handleMainDropdown}
-                  onMouseEnter={handleHoverEnter}
-                  onMouseLeave={() => setOpenMainDropdown(false)}
+                  // onClick={handleHoverEnter}
+                  onMouseEnter={() => showDropdown(i)}
+                  onMouseLeave={() => hideDropdown(i)}
                 >
                   {nav.item}
+
+                  
+                  <MainDropdown 
+                    // mainDropdown={openMainDropdown}
+                    // contents = {contents}
+                    ref = {(el) => (dropdownRefs.current[i] = el)}
+                    contents = {navItems[i].children}
+                    innerRef = {(el) => (innerDropdownRefs.current[i] = el)}
+
+                  />
+                  
                 </span>
               ))
             }
@@ -65,10 +96,6 @@ const MainNav = () => {
         </div>
       </div>
 
-      <MainDropdown 
-        mainDropdown={openMainDropdown}
-        contents = {contents}
-      />
       
     </>
 

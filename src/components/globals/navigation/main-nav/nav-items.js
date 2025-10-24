@@ -6,7 +6,7 @@ export const navItems = [
                 name: "Our platforms",
                 items: [
                     {
-                        title: "Rhombridge Bridge",
+                        title: "RhomboidBridge",
                         text: "Empower your team to deliver exceptional care and achieve sustainable growth through our intelligent, healthcare platform."
                     }
                 ]

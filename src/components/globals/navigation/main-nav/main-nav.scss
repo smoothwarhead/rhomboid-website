@@ -1,53 +1,64 @@
-.main-nav{
+.main-nav {
     width: 100%;
     height: 100px;
     background: #fff;
     border-bottom: 0.5px solid #a6b1ac;
 
-    .main-nav-con{
+    .main-nav-con {
         width: 92%;
         height: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-
        
-        .main-nav-logo{
-            
+
+        .main-nav-logo {
+
             width: fit-content;
-            height: fit-content;
+            height: 100%;
             display: flex;
             align-items: center;
+            
 
-            img{
-                width: 60px;
-                height: 40px;
-            }
+            a {
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                img {
+                    width: 60px;
+                    height: 40px;
+                }
 
-            .main-nav-logo-text{
-                font-size: 20px;
-                margin-left: 10px;
-                font-weight: 600;
-                color: #47695C;
-            }
-
-        }
-
-        .main-nav-right{
-            width: fit-content;
-            .nav-items{
-                color: #47695C;
-                margin-left: 40px;
-                font-weight: 500;
-                cursor: pointer;
-
-                &:hover{
-                    opacity: 0.6;
+                .main-nav-logo-text {
+                    font-size: 20px;
+                    margin-left: 10px;
+                    font-weight: 600;
+                    color: #47695C;
                 }
             }
 
+
+
         }
-        
+
+        .main-nav-right {
+            width: fit-content;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+
+
+            .nav-items {
+                color: #47695C;
+                margin-left: 40px;
+                font-weight: 500;
+                padding-bottom: 35px;
+                position: relative;
+
+            }
+
+        }
+
     }
 }
