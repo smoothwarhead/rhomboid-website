@@ -7,7 +7,8 @@ export const navItems = [
                 items: [
                     {
                         title: "RhomboidBridge",
-                        text: "Empower your team to deliver exceptional care and achieve sustainable growth through our intelligent, healthcare platform."
+                        text: "Empower your team to deliver exceptional care and achieve sustainable growth through our intelligent, healthcare platform.",
+                        link: "/solutions/rhomboidbridge"
                     }
                 ]
             },
@@ -16,12 +17,16 @@ export const navItems = [
                 name: "Rhomboid Bridge Solutions",
                 items: [
                     {
-                        title: "Electronic Health Record",
-                        text: "Simplify personalized patient care with our EHR solution."
+                        title: "Electronic Health Records",
+                        text: "Simplify personalized patient care with our EHR solution.",
+                        link: "/solutions/electronic-health-records"
+
                     },
                     {
                         title: "Patient Engagement",
-                        text: "Deliver a smarter, smoother patient experience with our self-service platform"
+                        text: "Deliver a smarter, smoother patient experience with our self-service platform",
+                        link: "/solutions/patient-engagement"
+
                     },
                 ]
             },
@@ -31,19 +36,27 @@ export const navItems = [
                 items: [
                     {
                         title: "Value-Based Care Support",
-                        text: "Boost care quality and streamline tracking, documentation, and reimbursement."
+                        text: "Boost care quality and streamline tracking, documentation, and reimbursement.",
+                        link: "/solutions/rhomboidbridge/value-based-care"
+
                     },
                     {
                         title: "Interoperability",
-                        text: "Access the data you need, exactly when you need it, from across our connected network."
+                        text: "Access the data you need, exactly when you need it, from across our connected network.",
+                        link: "/solutions/rhomboidbridge/interoperability"
+
                     },
                      {
                         title: "Cost & Value",
-                        text: "We’re designed around one goal—your success."
+                        text: "We’re designed around one goal—your success.",
+                        link: "/solutions/rhomboidbridge/cost-and-value"
+
                     },
                      {
                         title: "Customer Support",
-                        text: "Hands-on training and live support designed to empower you from day one."
+                        text: "Hands-on training and live support designed to empower you from day one.",
+                        link: "/solutions/rhomboidbridge/customer-support"
+
                     }
 
 
@@ -62,23 +75,33 @@ export const navItems = [
                 items: [
                     {
                         title: "Startup Practices",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/startup-practices"
+
                     },
                     {
                         title: "Small Medical Practices",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/small-medical-practices"
+
                     },
                     {
                         title: "Medium to Large Medical Groups",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/medium-to-large-medical-groups"
+
                     },
                     {
                         title: "Enterprises & Health Systems",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/enterprises-and-health-systems"
+
                     },
                     {
                         title: "Federally Qualified Health Center",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/federally-qualified-health-center"
+
                     },
                 ]
             },
@@ -88,23 +111,33 @@ export const navItems = [
                 items: [
                     {
                         title: "Behavioral Health & Psychiatrics",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/behavioral-health-and-psychiatrics"
+
                     },
                     {
                         title: "Orthopedics",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/orthopedics"
+
                     },
                     {
                         title: "Pediatrics",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/pediatrics"
+
                     },
                     {
                         title: "Women's Health",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/women's-health"
+
                     },
                     {
                         title: "Primary Care",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/primary-care"
+
                     },
                 ]
             },
@@ -114,15 +147,22 @@ export const navItems = [
                 items: [
                     {
                         title: "Healthcare Payers",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/healthcare-payers"
+
                     },
                     {
                         title: "Labs & Imaging Centers",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/labs-and-imaging-centers"
+
                     },
                     {
                         title: "Pharmacies",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/pharmacies",
+
+
                     },
                 ]
             },
@@ -132,11 +172,15 @@ export const navItems = [
                 items: [
                     {
                         title: "Marketplace Partners",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/partners",
+
                     },
                     {
                         title: "Developers",
-                        text: ""
+                        text: "",
+                        link: "/who-we-serve/developers",
+
                     },
                 ]
             },
@@ -144,6 +188,8 @@ export const navItems = [
         
         ]
     },
+
+
     {
         item: "Resources",
         children: [
@@ -152,11 +198,15 @@ export const navItems = [
                 items: [
                     {
                         title: "Patient Portal Login",
-                        text: ""
+                        text: "",
+                        link: "/resources/patient-portal-login"
+
                     },
                     {
                         title: "Patient Resources",
-                        text: ""
+                        text: "",
+                        link: "/resources/patient-resources"
+
                     },
                                      
                 ]
@@ -167,11 +217,15 @@ export const navItems = [
                 items: [
                     {
                         title: "Contact Us",
-                        text: ""
+                        text: "",
+                        link: "/resources/contact-us"
+
                     },
                     {
                         title: "Resources",
-                        text: ""
+                        text: "",
+                        link: "/resources/customer-resources"
+
                     },
                     
                 ]
@@ -187,11 +241,15 @@ export const navItems = [
                 items: [
                     {
                         title: "Who We Are",
-                        text: ""
+                        text: "",
+                        link: "/about/who-we-are"
+
                     },
                     {
                         title: "Leadership",
-                        text: ""
+                        text: "",
+                        link: "/about/leadership"
+
                     },
                                      
                 ]
@@ -202,11 +260,15 @@ export const navItems = [
                 items: [
                     {
                         title: "Contact Us",
-                        text: ""
+                        text: "",
+                        link: "/about/contact-us"
+
                     },
                     {
                         title: "Careers",
-                        text: ""
+                        text: "",
+                        link: "/about/careers"
+
                     },
                     
                 ]

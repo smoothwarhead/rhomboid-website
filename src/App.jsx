@@ -3,19 +3,20 @@
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
 import SiteLayout from './layouts/SiteLayout'
+import { getApp } from './utils/helpers'
 
 function App() {
+
+  const CurrentApp = getApp();
   
 
   return (
     
       <div className='container'>
         <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<SiteLayout />}>
-              {/* <Route /> */}
-            </Route>
-          </Routes>
+
+         <CurrentApp />
+         
         </BrowserRouter>
       </div>
   )

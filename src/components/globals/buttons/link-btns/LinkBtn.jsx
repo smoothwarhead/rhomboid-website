@@ -17,4 +17,4 @@ const LinkBtn = (props) => {
   )
 }
 
-export default LinkBtn
+export default LinkBtn;

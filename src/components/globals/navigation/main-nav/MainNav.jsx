@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import NavLogo from './navLogo.png';
 import { navItems } from './nav-items';
 import MainDropdown from '../main-dropdown/MainDropdown';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef,} from 'react';
 import { gsap, Power2, Power3 }from "gsap";
 
 

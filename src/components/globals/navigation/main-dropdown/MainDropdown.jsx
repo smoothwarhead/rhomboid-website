@@ -57,7 +57,11 @@ const MainDropdown = forwardRef(({ contents }, ref, innerRef) => {
                                 <div className="md-links">
                                     {
                                         c.items.map((item, i) => (
-                                            <Link className="md-con-link" key={i}>
+                                            <Link 
+                                                className="md-con-link" 
+                                                key={i}
+                                                to={item.link}
+                                            >
                                                 <span className="link-title">{item.title}</span>
                                                 <span className="link-text">{item.text}</span>
 

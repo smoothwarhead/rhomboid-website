@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
 import Header from "../components/globals/navigation/header/Header";
-import Footer from "../components/globals/Footer";
+import Footer from "../components/globals/footer/Footer";
 
 const SiteLayout = () => {
   return (

@@ -1,0 +1,22 @@
+.btn{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4B9181;
+    border: 0.5px solid #4B9181;
+    border-radius: 10px;
+
+}
+
+.active-btn{
+    border: 1px solid #4B9181;
+    background: #fff;
+}
+
+.active-green-btn{
+    // border: 1px solid #4B9181;
+    background: #4B9181;
+    color: #fff;
+}
