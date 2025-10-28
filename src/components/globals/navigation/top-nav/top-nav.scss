@@ -1,3 +1,6 @@
+@use "../../../../styles/variables";
+@use "sass:map";
+
 .top-nav{
     background: #132A50;
     height: 40px;
@@ -6,7 +9,7 @@
     font-weight: 600;
 
     .top-items{
-        width: 92%;
+        width: map.get(variables.$layout-width, "l");
         height: 100%;
         margin: auto;
         display: flex;

@@ -1,26 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import EhrTablet from "./tablet.png"; 
-import ActiveGreenBtn from "../../../components/globals/buttons/btns/ActiveGreenBtn";
+import EhrTablet from "./tablet.png";
 import LinkBtn from "../../../components/globals/buttons/link-btns/LinkBtn";
-// import LoopedSettings from "./loopedSettings.png"; 
-// import LoopedChart from "./loopedChart.png"; 
-// import LoopedPortal from "./loopedPortal.png"; 
-
-
-
+import LoopedSettings from "./loopedSettings.png";
+import LoopedChart from "./loopedChart.png";
+import LoopedPortal from "./loopedPortal.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const EHR = () => {
-
   const sectionRef = useRef(null);
   const tabletRef = useRef(null);
 
-   useEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
-
       //tablet reveal
       gsap.from(tabletRef.current, {
         y: 100,
@@ -49,7 +43,6 @@ const EHR = () => {
         },
       });
 
-
       // demo button animation
       gsap.from(".demo-btn", {
         y: 40,
@@ -75,7 +68,6 @@ const EHR = () => {
           start: "top 80%",
         },
       });
-
 
       // Text and highlight box
 
@@ -105,89 +97,101 @@ const EHR = () => {
     return () => ctx.revert();
   }, []);
 
-
-
-
   return (
     <section ref={sectionRef} className="ehr-section">
-      <div className="hero">
-        <div className="hero-left">
+      <div className="ehr-section-1">
+        <div className="hero">
+          <div className="hero-left">
+            <p className="hero-intro">
+              An all-in-one EHR that simplifies care and documentation
+            </p>
+            <h2>Electronic Health Records</h2>
 
-          <p className="hero-intro">An all-in-one EHR that simplifies care and documentation</p>
-          <h2>Electronic Health Records</h2>
+            <p className="hero-text">
+              Focus more on your patients and less on paperwork. Our Advanced
+              technological EHR, Rhomboid Health, helps you make better-informed
+              decisions, coordinate care seamlessly, and reduce administrative
+              strain.
+            </p>
 
-          <p className="hero-text">Focus more on your patients and less on paperwork. Our Advanced technological EHR, Rhomboid Health, helps you make better-informed decisions, coordinate care seamlessly, and reduce administrative strain.</p>
-
-          <LinkBtn
-            text="Request a demo"
-            cName="demo-btn"
-            to="/request-a-demo"
-            
-          />
-
+            <LinkBtn
+              text="Request a demo"
+              cName="demo-btn"
+              to="/request-a-demo"
+            />
+          </div>
+          <div className="hero-right" ref={tabletRef}>
+            <img src={EhrTablet} alt="Rhomboid Health EHR" className="tablet" />
+          </div>
         </div>
-        <div className="hero-right" ref={tabletRef}>
 
-          <img src={EhrTablet} alt="Rhomboid Health EHR" className="tablet" />
+        <div className="features-section">
+          <h2>Stay on the leading edge of care through the cloud</h2>
+          <p>
+            With no software to install or hardware to maintain, our fully
+            cloud-based EHR stays automatically up to date—keeping you aligned
+            with the ever-evolving clinical landscape
+          </p>
 
+          <div className="feature-cards-con">
+            <div className="feature-card">
+              <div className="icon">
+                <img src={LoopedSettings} alt="" />
+              </div>
+              <h3>Automatic updates</h3>
+              <p>
+                No more manual updates or outdated software—your EHR stays
+                effortlessly up to date in the cloud.
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="icon">
+                <img src={LoopedChart} alt="" />
+              </div>
+              <h3>Chart on any device</h3>
+              <p>
+                Access patient data anytime, on any device—laptop, tablet, or
+                mobile—for greater flexibility and convenience.
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="icon">
+                <img src={LoopedPortal} alt="" />
+              </div>
+              <h3>Free patient portal</h3>
+              <p>
+                Deliver a seamless patient experience at every stage of
+                care—before, during, and after each visit—while empowering
+                patients to take an active role in their health.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="features-section">
-        <div className="feature-card">
-          <div className="icon">
-            {/* <img src={LoopedSettings} alt="" /> */}
-
+      <div className="ehr-section-2">
+        <div className="workflow">
+          <div className="text-section">
+            <h2>Save time with clinical workflows tailored to your needs</h2>
+            <p>
+              Your EHR comes with a free library of customizable charting
+              templates, so you can quickly e-prescribe, send lab and imaging
+              orders, and share results right from your patient’s electronic
+              health record.
+            </p>
           </div>
-          <h3>Automatic updates</h3>
-          <p>
-            No more manual updates or outdated software—your EHR stays
-            effortlessly up to date in the cloud.
-          </p>
-        </div>
-        <div className="feature-card">
-          <div className="icon">
-            {/* <img src={LoopedChart} alt="" /> */}
 
-          </div>
-          <h3>Chart on any device</h3>
-          <p>
-            Access patient data anytime, on any device—laptop, tablet, or
-            mobile—for greater flexibility and convenience.
-          </p>
-        </div>
-        <div className="feature-card">
-          <div className="icon">
-            {/* <img src={LoopedPortal} alt="" /> */}
-          </div>
-          <h3>Free patient portal</h3>
-          <p>
-            Deliver a seamless patient experience at every stage of care—before,
-            during, and after each visit—while empowering patients to take an
-            active role in their health.
-          </p>
-        </div>
-      </div>
-
-      <div className="workflow">
-        <div className="text-section">
-          <h2>Save time with clinical workflows tailored to your needs</h2>
-          <p>
-            Your EHR comes with a free library of customizable charting
-            templates, so you can quickly e-prescribe, send lab and imaging
-            orders, and share results right from your patient’s electronic
-            health record.
-          </p>
-        </div>
-
-        <div className="highlight-box">
-          <h4>With Rhomboid Bridge EHR, you get:</h4>
-          <ul>
-            <li>• Intuitive charting</li>
-            <li>• Seamless e-prescribing</li>
-            <li>• Labs and imaging connections</li>
-            <li>• Patient engagement capabilities</li>
-          </ul>
+          <span>
+            <div className="highlight-box">
+              <h4>With Rhomboid Bridge EHR, you get:</h4>
+              <ul>
+                <li>• Intuitive charting</li>
+                <li>• Seamless e-prescribing</li>
+                <li>• Labs and imaging connections</li>
+                <li>• Patient engagement capabilities</li>
+              </ul>
+            </div>
+          </span>
         </div>
       </div>
     </section>
