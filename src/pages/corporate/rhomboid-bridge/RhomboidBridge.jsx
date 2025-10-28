@@ -13,6 +13,8 @@ import ScrollMerge from "../../../components/globals/scroll-merge/ScrollMerge";
 gsap.registerPlugin(ScrollTrigger);
 
 const RhomboidBridge = () => {
+
+  
   const containerRefs = useRef([]);
   const revealerRefs = useRef([]);
   const btnRefs = useRef([]);
@@ -154,6 +156,7 @@ const RhomboidBridge = () => {
               key={index}
               ref={(el) => (containerRefs.current[index] = el)}
               contents = {item}
+              size = "small"
             />
             // <div
             //   className="merge-section"
