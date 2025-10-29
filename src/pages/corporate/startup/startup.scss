@@ -1,22 +1,22 @@
 @use "../../../styles/variables";
 @use "sass:map";
 
-.startup-page{
+.startup-page {
     width: map.get(variables.$layout-width, "l");
     margin: 40px auto;
 
 
-    .section-2{
+    .section-2 {
         margin-top: 40px;
-        border: 1px solid red;
-        p{
+
+        p {
             color: variables.$green;
             text-align: center;
             font-weight: 600;
             margin-bottom: 10px;
         }
 
-        h3{
+        h3 {
             font-size: 48px;
             font-weight: 600;
             text-align: center;
@@ -24,19 +24,15 @@
         }
 
 
-        .section-mergers{
-            border: 1px solid black;
-
-        }
 
     }
 
 
-    .section-3{
+    .section-3 {
         width: 80%;
-        margin: 40px auto;
-        border: 1px solid red;
-        p{
+        margin: 60px auto;
+
+        p {
             font-size: 16px;
             // color: variables.$green;
             text-align: center;
@@ -44,63 +40,144 @@
             margin-bottom: 10px;
         }
 
-        h3{
+        h3 {
             font-size: 48px;
             font-weight: 600;
             text-align: center;
             margin-bottom: 40px;
         }
 
-        .section-btn{
+        .section-btn {
             width: fit-content;
             margin: 50px auto;
         }
 
     }
 
-    .section-4{
+    .section-4 {
         width: 100%;
-        border: 1px solid black;
         display: flex;
         justify-content: space-between;
 
-        .section-4-left{
+        .section-4-left {
             width: 30%;
-            border: 1px solid red;
 
-            h3{
+            h3 {
                 font-size: 48px;
                 margin-bottom: 20px;
             }
 
-            p{
+            p {
                 font-size: 16px;
             }
 
         }
 
-        .section-4-right{
+        .section-4-right {
             width: 65%;
-            border: 1px solid green;
+         
             background: #fff;
             height: fit-content;
             border: 1px solid #BCD2E8;
 
-            .form-title{
-                width: 100%;
-                background: #BCD2E8;
-                padding: 8px 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
+             .existing-patient {
+                    text-align: center;
+                    background: #BCD2E8;
+                    padding: 10px;
+                    font-size: 16px;
+                    
+                    a {
+                        color: #216AF3;
+                        // text-decoration: underline;
+                    }
             }
 
-            .form-container{
-                width: 100%;
+            .contact-section {
+                background: #fff;
                 padding: 40px 30px;
+
+               
+
+                .form-container {
+                    
+                    max-width: 960px;
+                    margin: 0 auto;
+                    // padding-top: 2rem;
+
+                    .form-section {
+                        margin-bottom: 40px;
+
+                        h2 {
+                            color: variables.$green;
+                            font-size: 24px;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            margin-bottom: 30px;
+                            font-size: 16px;
+                        }
+
+                        .form-grid {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                        }
+                    }
+
+
+                    .form-footer {
+                        text-align: left;
+                        margin-top: 30px;
+
+                        p {
+                            font-size: 0.9rem;
+                            margin-bottom: 1rem;
+
+                            a {
+                                color: #216AF3;
+
+                            }
+                        }
+
+                        .submit-btn {
+                            background: #E7E9E3;
+                            border: none;
+                            border-radius: 6px;
+                            color: #c0bdbd;
+                            padding: 10px 20px;
+                            font-size: 16px;
+                            cursor: not-allowed;
+                        }
+
+                        .note {
+                            margin-top: 50px;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+
+
             }
-            
+
+
+            // .form-title{
+            //     width: 100%;
+            //     background: #BCD2E8;
+            //     padding: 8px 40px;
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+
+            // }
+
+            // .form-container{
+            //     width: 100%;
+            //     padding: 40px 30px;
+            // }
+
 
         }
     }

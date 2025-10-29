@@ -5,11 +5,19 @@ import ScrollMerge from "../../../components/globals/scroll-merge/ScrollMerge";
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ActiveBtn from "../../../components/globals/buttons/btns/ActiveBtn";
+import { Link } from "react-router";
+import InputField from "../../../components/globals/forms/input/InputField";
+import SelectField from "../../../components/globals/forms/select/SelectField";
+
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Startup = () => {
   const containerRefs = useRef([]);
+
+  const formRef = useRef(null);
 
   useEffect(() => {
     containerRefs.current.forEach((el, i) => {
@@ -79,30 +87,133 @@ const Startup = () => {
         </div>
       </div>
 
-
       <div className="section-4">
         <div className="section-4-left">
           <h3>Get set for success from the start</h3>
-          <p>We will contact you within 2 business hours of form submission to schedule a brief call.</p>
+          <p>
+            We will contact you within 2 business hours of form submission to
+            schedule a brief call.
+          </p>
         </div>
-
 
         <div className="section-4-right">
 
-          <div className="form-title">
-            <p>Are you an existing patient?</p><span>View my Patient Portal</span>
+          <div className="existing-patient">
+            Are you an existing patient?{" "}
+            <Link href="#">View my Patient Portal.</Link>
           </div>
 
-          <div className="form-container">
+
+          <section className="contact-section" ref={formRef}>
+
+            <div className="form-container">
+              {/* Section 1 */}
+              <div className="form-section">
+                <h2>Let's get in touch.</h2>
+                <p>
+                  Please provide the following information so our team can reach
+                  out.
+                </p>
+                <div className="form-grid">
+                  <InputField
+                    label="First Name"
+                    name="firstName"
+                    placeholder="First Name"
+                    required
+                  />
+                  <InputField
+                    label="Last Name"
+                    name="lastName"
+                    placeholder="Last Name"
+                    required
+                  />
+                  <InputField
+                    label="Company Email"
+                    name="email"
+                    placeholder="Company Email"
+                    required
+                  />
+                  <InputField
+                    label="Phone Number"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Section 2 */}
+              <div className="form-section">
+                <h2>Let's get to know each other better.</h2>
+                <p>
+                  Help us understand your needs by telling us a little about
+                  your future practice.
+                </p>
+
+                <div className="form-grid">
+                  <SelectField
+                    label="Which best describes your current situation?"
+                    name="situation"
+                    options={[
+                      "Starting new practice",
+                      "Expanding current practice",
+                      "Researching options",
+                    ]}
+                    required
+                  />
+                  <SelectField
+                    label="When are you planning to open your new practice?"
+                    name="openingTime"
+                    options={[
+                      "Within 3 months",
+                      "3–6 months",
+                      "6–12 months",
+                      "Not sure yet",
+                    ]}
+                    required
+                  />
+                  <SelectField
+                    label="Does your new practice have a legal name?"
+                    name="legalName"
+                    options={["Yes", "No"]}
+                    required
+                  />
+                  <SelectField
+                    label="Have you secured a location for your practice?"
+                    name="locationSecured"
+                    options={["Yes", "No"]}
+                    required
+                  />
+                  <SelectField
+                    label="Are you planning to accept insurance"
+                    name="insurance"
+                    options={["Yes", "No", "Not yet decided"]}
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="form-footer">
+                <p>
+                  By submitting your information, you agree to our{" "}
+                  <a href="#">Privacy Policy</a> and{" "}
+                  <a href="#">Terms of Use</a>.
+                </p>
+                <button className="submit-btn" disabled>
+                  Submit
+                </button>
+                <p className="note">
+                  Patients, please do not use this form. Instead,{" "}
+                  <Link href="#">visit your patient portal here.</Link>
+                </p>
+              </div>
+
+            </div>
             
-          </div>
-
+          </section>
         </div>
-
       </div>
-
-
-
     </div>
   );
 };
