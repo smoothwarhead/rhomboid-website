@@ -6,7 +6,7 @@ const PageHero = (props) => {
     const { btnText, p, h2, span } = props
   return (
     <section className="hero">
-        <div className="hero-left">
+        <div className="page-hero-left">
             <p>{p}</p>
 
             <h2>
@@ -21,7 +21,7 @@ const PageHero = (props) => {
             />
 
         </div>
-        <div className="hero-right">
+        <div className="page-hero-right">
 
           <span>
             <div className="dot"></div>

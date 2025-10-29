@@ -1,11 +1,15 @@
-import { useEffect, useRef, forwardRef } from 'react'
+import { useEffect, useRef, forwardRef, useContext } from 'react'
 import { gsap, Power2, Power3 }from "gsap";
 import { Link } from 'react-router';
 import { FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import NavContext from '../../../../context/NavContext';
 
 
 const MainDropdown = forwardRef(({ contents }, ref, innerRef) => {
+
+    const { setOpenMenu } = useContext(NavContext);
+    
 
     // const { mainDropdown, contents } = props;
 
@@ -44,6 +48,7 @@ const MainDropdown = forwardRef(({ contents }, ref, innerRef) => {
 
 
 
+
   return (
     <div className='main-dropdown' ref={ref}>
         <div className="main-slide" ref={innerRef}>
@@ -61,6 +66,7 @@ const MainDropdown = forwardRef(({ contents }, ref, innerRef) => {
                                                 className="md-con-link" 
                                                 key={i}
                                                 to={item.link}
+                                                onClick={() => setOpenMenu(null)}
                                             >
                                                 <span className="link-title">{item.title}</span>
                                                 <span className="link-text">{item.text}</span>

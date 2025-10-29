@@ -5,11 +5,12 @@ import Home from '../pages/corporate/home/Home'
 import RhomboidBridge from '../pages/corporate/rhomboid-bridge/RhomboidBridge'
 import EHR from '../pages/corporate/ehr/EHR'
 import Startup from '../pages/corporate/startup/Startup'
+import { NavProvider } from '../context/NavContext'
 
 const CorporateRouter = () => {
   return (
     <Routes>
-        <Route path='/' element={ <SiteLayout /> }>
+        <Route path='/' element={<NavProvider> <SiteLayout /> </NavProvider>}>
             <Route index element={ <Home /> } />
             <Route path='/solutions/rhomboidbridge' element={ <RhomboidBridge /> } />
             <Route path='/solutions/electronic-health-records' element={ <EHR /> } />
