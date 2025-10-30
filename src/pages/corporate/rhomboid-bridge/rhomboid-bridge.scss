@@ -114,63 +114,23 @@
 
 
         .scroll-reveal-wrapper {
-            width: 60%;
+            width: 100%;
             margin: 60px auto;
-
-            .reveal-card {
-                width: 100%;
-                // max-width: 700px;
-                margin: 0 auto;
-                padding: 45px 60px;
-                position: relative;
-                top: -10px;
-                margin-bottom: 30px;
-                opacity: 0;
-
-                .reveal-card-border {
-                    background: linear-gradient(189deg, variables.$green, rgba(0, 91, 255, 0) 50%), linear-gradient(90deg, hsla(0, 0%, 85%, 0) 50%, hsla(0, 0%, 85%, .2));
-                    border-radius: inherit;
-                    border-radius: 15px;
-                    box-sizing: border-box;
-                    inset: 0;
-                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-                    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-                    -webkit-mask-composite: destination-out;
-                    mask-composite: destination-out;
-                    -webkit-mask-composite: xor;
-                    mask-composite: exclude;
-                    padding: 1px;
-                    pointer-events: none;
-                    position: absolute;
-                    z-index: 0;
-
-                }
-
-                .reveal-card-content {
-
-
-                     h2 {
-                        font-size: 32px;
-                        font-weight: 600;
-                        color: variables.$green;
-                        margin-bottom: 20px;
-                    }
-
-                    .content-p{
-                        font-size: 16px;
-                        font-weight: 500;
-                        line-height: 1.6;
-                        color: #000;
-                        text-align: left;
-                    }
-
-                }
-
-
-
-               
+          
+            &::after{
+                content: "";
+                display: table;
+                clear: both;
             }
 
+            > :nth-child(odd){
+                float: left;
+                
+            }
+            > :nth-child(even){
+                float: right;
+                
+            }
 
         }
 

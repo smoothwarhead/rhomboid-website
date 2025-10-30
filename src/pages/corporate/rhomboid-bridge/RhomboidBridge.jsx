@@ -8,6 +8,7 @@ import { useEffect, useRef } from "react";
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollMerge from "../../../components/globals/scroll-merge/ScrollMerge";
+import ScrollReveal from "../../../components/globals/scroll-reveal/ScrollReveal";
 // import "./ScrollMerge.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -32,8 +33,8 @@ const RhomboidBridge = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: el,
-          start: "top 80%",
-          end: "top 80%",
+          start: "top 70%",
+          end: "top 70%",
           scrub: true,
         },
       });
@@ -158,14 +159,7 @@ const RhomboidBridge = () => {
               contents = {item}
               size = "small"
             />
-            // <div
-            //   className="merge-section"
-            //   key={index}
-            //   ref={(el) => (containerRefs.current[index] = el)}
-            // >
-            //   <div className="left-box">{item.left}</div>
-            //   <div className="right-box">{item.right}</div>
-            // </div>
+      
           ))}
         </div>
 
@@ -187,17 +181,14 @@ const RhomboidBridge = () => {
 
         <div className="scroll-reveal-wrapper">
           {scrollRevealData.map((item, index) => (
-            <div
-              className="reveal-card"
+            
+            <ScrollReveal 
+              contents={item} 
               key={index}
               ref={(el) => (revealerRefs.current[index] = el)}
-            >
-              <div className="reveal-card-border"></div>
-              <div className="reveal-card-content">
-                <h2>{item.title}</h2>
-                <p className="content-p">{item.text}</p>
-              </div>
-            </div>
+              
+            />
+
           ))}
         </div>
 

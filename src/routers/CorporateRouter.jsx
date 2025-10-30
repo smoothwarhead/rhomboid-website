@@ -6,6 +6,7 @@ import RhomboidBridge from '../pages/corporate/rhomboid-bridge/RhomboidBridge'
 import EHR from '../pages/corporate/ehr/EHR'
 import Startup from '../pages/corporate/startup/Startup'
 import { NavProvider } from '../context/NavContext'
+import SmallMedical from '../pages/corporate/small-medical/SmallMedical'
 
 const CorporateRouter = () => {
   return (
@@ -15,6 +16,7 @@ const CorporateRouter = () => {
             <Route path='/solutions/rhomboidbridge' element={ <RhomboidBridge /> } />
             <Route path='/solutions/electronic-health-records' element={ <EHR /> } />
             <Route path='/who-we-serve/startup-practices' element={ <Startup /> } />
+            <Route path='/who-we-serve/small-medical-practices' element={ <SmallMedical/> } />
         </Route>
     </Routes>
   )

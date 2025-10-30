@@ -1,0 +1,20 @@
+     .section-reveal-wrapper {
+            width: 100%;
+            margin: 60px auto;
+          
+            &::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            > :nth-child(odd){
+                float: left;
+                
+            }
+            > :nth-child(even){
+                float: right;
+                
+            }
+
+        }

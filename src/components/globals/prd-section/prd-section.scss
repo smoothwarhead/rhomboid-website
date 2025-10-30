@@ -1,0 +1,43 @@
+@use "../../../styles/variables";
+@use "sass:map";
+
+.prd-section {
+    width: 100%;
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+
+
+
+
+    .left {
+        width: 30%;
+
+        .left-h3 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .left-p {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+    }
+
+    .step-container {
+
+        border: 1px solid variables.$light-blue;
+        width: 65%;
+        background: #fff;
+        padding: 20px 40px 80px 40px;
+
+
+
+
+
+
+    }
+}

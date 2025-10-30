@@ -8,6 +8,7 @@ import ActiveBtn from "../../../components/globals/buttons/btns/ActiveBtn";
 import { Link } from "react-router";
 import InputField from "../../../components/globals/forms/input/InputField";
 import SelectField from "../../../components/globals/forms/select/SelectField";
+import MidPage from "../../../components/globals/mid-page/MidPage";
 
 
 
@@ -75,17 +76,12 @@ const Startup = () => {
         </div>
       </div>
 
-      <div className="section-3">
-        <h3>Technology built with your specialty in mind</h3>
-        <p>
-          From specialty-specific workflows and accelerators to tailorable
-          revenue cycle technology, athenaOne is designed to support your needs.
-        </p>
+      <MidPage
+        text="From specialty-specific workflows and accelerators to tailorable
+          revenue cycle technology, rhomboidBridge is designed to support your needs."
 
-        <div className="section-btn">
-          <ActiveBtn text="See who we serve" active={true} />
-        </div>
-      </div>
+       />
+
 
       <div className="section-4">
         <div className="section-4-left">

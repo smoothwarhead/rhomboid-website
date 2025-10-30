@@ -3,18 +3,27 @@
 
 export const scrollRevealData = [
   {
+    for: "",
+    btnText: "",
     title: "Empower patient access",
     text: "Help patients stay informed and involved by making it free and easy to view their health history and track their test results.",
+
   },
   {
+    for: "",
+    btnText: "",
     title: "Enable self-service",
     text: "Help patients stay engaged in their care through secure messaging and simple appointment management.",
   },
   {
+    for: "",
+    btnText: "",
     title: "Simplify patient payment",
     text: "Make payments simple and convenient for patients with flexible tools that fit their preferred way to pay.",
   },
   {
+    for: "",
+    btnText: "",
     title: "Automated wellness outreach",
     text: "Make it easier for patients to stay on top of their care with friendly, automated reminders to schedule needed visits.",
   },
@@ -140,4 +149,26 @@ export const startupMergeData = [
   },
 
  
+];
+
+export const smallRevealData = [
+  {
+    for: "EHR FOR SMALL PRACTICES",
+    btnText: "Explore our EHR",
+    title: "Increase efficiency and ease",
+    text: "Tailorable workflows reduce documentation time, freeing you to focus on delivering care and growing your practice.",
+
+  },
+  {
+    for: "PATIENT ENGAGEMENT",
+    btnText: "Explore patient engagement services",
+    title: "Connect with patients more easily",
+    text: "Reduce no-shows, increase collections, and close care gaps faster with automated reminders and tailored messaging.",
+  },
+  {
+    for: "PATIENT EXPERIENCE",
+    btnText: "Explore patient engagement services",
+    title: "Tools that empower while relieving work",
+    text: "Make it easy for patients to manage their health with digital access to care information, appointment scheduling, and bill pay options while reducing work for your team.",
+  },
 ];

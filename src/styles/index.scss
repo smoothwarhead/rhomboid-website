@@ -7,6 +7,7 @@
 @use "../components/globals/navigation/account-dropdown//account-dropdown.scss";
 @use "../components/globals/buttons/link-btns/link-btn.scss";
 @use "../components/globals/page-hero/page-hero.scss";
+@use "../pages/corporate/small-medical/small-medical.scss";
 @use "../layouts/site-layout.scss";
 @use "../components/globals/footer/footer.scss";
 @use "../pages/corporate/rhomboid-bridge/rhomboid-bridge.scss";
@@ -16,6 +17,12 @@
 @use "../components/globals/scroll-merge/scroll-merge.scss";
 @use "../components/globals/forms/input/input-field.scss";
 @use "../components/globals/forms/select/select-field.scss";
+@use "../components/globals/scroll-reveal/scroll-reveal.scss";
+@use "../components/globals/mid-page/mid-page.scss";
+@use "../components/globals/prd-section/prd-section.scss";
+@use "../components/others/step-forms/step-forms.scss";
+@use "../components/others/multi-step-form/multi-form.scss";
+
 
 
 
