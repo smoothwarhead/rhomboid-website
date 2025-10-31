@@ -2,14 +2,20 @@ import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import InputField from "../../globals/forms/input/InputField";
-import { stepFormData } from "../../globals/prd-section/prd-data";
+import { stepFormData, stepFormInput1, stepPatientFormData } from "../../globals/prd-section/prd-data";
 import ProgressIndicator from "./ProgressIndicator";
+import StepOrganizationFormOne from "../step-forms/StepOrganizationFormOne";
+import StepPatientForm from "../step-forms/StepPatientForm";
+import StepCustomerForm from "../step-forms/StepCustomerForm";
+import StepOrganizationFormTwo from "../step-forms/StepOrganizationFormTwo";
 // import "./MultiStepForm.scss";
 
 const MultiStepForm = () => {
 
   const [step, setStep] = useState(1);
   const [selectedOption, setSelectedOption] = useState({ id: "", option: "" });
+  const [selectedOption2, setSelectedOption2] = useState({ id: "", option: "" });
+  const [selectedOption3, setSelectedOption3] = useState({ id: "", option: "" });
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -52,7 +58,26 @@ const MultiStepForm = () => {
   }, [step]);
 
   const handleOptionSelect = (option) => {
-    setSelectedOption(option);
+
+    if(step === 1){
+        setSelectedOption(option);
+    }
+    if(step === 2){
+        console.log(option, "2");
+        if(selectedOption.id === 1){
+            setSelectedOption2(option);
+
+        }else{
+            setSelectedOption3(option);
+            
+        }
+
+    }
+    // if(step === 3){
+
+    //     console.log(option)
+    //     setSelectedOption3(option);
+    // }
   };
 
   const handleChange = (e) => {
@@ -93,7 +118,7 @@ const MultiStepForm = () => {
   };
 
   // Validation for enabling buttons
-  const isStep1Valid = !!selectedOption;
+  const isStep1Valid = !!selectedOption.id;
   const isStep2Valid =
     formData.firstName.trim() &&
     formData.lastName.trim() &&
@@ -127,17 +152,17 @@ const MultiStepForm = () => {
       <div className="form-content" ref={containerRef}>
         {/* STEP 1 */}
         {step === 1 && (
-          <div className="step step-1">
+          <div className="step step-2">
 
             <ProgressIndicator 
                 step={step}
-                ref={(el) => (stepRefs.current[i] = el)}
-
+               
             />
 
 
             <h2>Which best describes you?</h2>
             <p>(Choose One)</p>
+
             <div className="options">
               {stepFormData.map((option, i) => (
                 <button
@@ -153,6 +178,7 @@ const MultiStepForm = () => {
                 </button>
               ))}
             </div>
+
             <button
               className="next"
               onClick={nextStep}
@@ -163,179 +189,59 @@ const MultiStepForm = () => {
           </div>
         )}
 
+
+
+
         {/* STEP 2 */}
 
         {selectedOption.id.toString() === "1" && step === 2 && (
-          <div className="step step-2">
-            <h2>Let's help you find what you're looking for.</h2>
-            {/* <p>Please share the following information so we can contact you.</p> */}
-
-            <button
-              className="next"
-              onClick={nextStep}
-              disabled={!isStep2Valid}
-            >
-              Next
-            </button>
-          </div>
+            <StepPatientForm 
+                step = {step}
+                nextStep = {nextStep}
+                selectedOption = {selectedOption2}
+                handleOptionSelect = {handleOptionSelect}
+            />
         )}
 
-        {selectedOption.id.toString() === "3" && step === 2 && (
-          <div className="step step-2">
-
-           
-
-            <h2>Let's help you find what you're looking for.</h2>
-            <p>Please share the following information so we can contact you.</p>
-
-            <button
-              className="next"
-              onClick={nextStep}
-              disabled={!isStep2Valid}
-            >
-              Next
-            </button>
-          </div>
-        )}
+       
 
         {selectedOption.id.toString() === "2" && step === 2 && (
-          <div className="step step-2">
 
-              <ProgressIndicator 
-                step={step}
-                ref={(el) => (stepRefs.current[i] = el)}
+            <StepOrganizationFormOne 
 
+                step = {step}
+                nextStep = {nextStep}
+                isStep2Valid={isStep2Valid}
+                formData={formData}
+                handleChange={handleChange}
+
+            
             />
-            <h2>Tell us about you.</h2>
-            <p>Please share the following information so we can contact you.</p>
-            <div className="form-grid">
-              <InputField
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                placeholder="First Name"
-                label="First Name"
-              />
-              {/* <div>
-                <label>First Name*</label>
-                <input
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  placeholder="First Name"
-                />
-              </div> */}
-              <div>
-                <label>Last Name*</label>
-                <input
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  placeholder="Last Name"
-                />
-              </div>
-              <div>
-                <label>Company Email*</label>
-                <input
-                  name="companyEmail"
-                  type="email"
-                  value={formData.companyEmail}
-                  onChange={handleChange}
-                  placeholder="Company Email"
-                />
-              </div>
-              <div>
-                <label>Phone Number*</label>
-                <input
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  placeholder="Phone Number"
-                />
-              </div>
-            </div>
-            <button
-              className="next"
-              onClick={nextStep}
-              disabled={!isStep2Valid}
-            >
-              Next
-            </button>
-          </div>
+    
+        )}
+
+
+        {selectedOption.id.toString() === "3" && step === 2 && (
+            <StepCustomerForm 
+                step = {step}
+                nextStep = {nextStep}
+                selectedOption = {selectedOption3}
+                handleOptionSelect = {handleOptionSelect}
+            />
         )}
 
         {/* STEP 3 */}
         {step === 3 && (
-          <form className="step step-3" onSubmit={handleSubmit}>
+          <StepOrganizationFormTwo 
 
-             <ProgressIndicator 
-                step={step}
-                ref={(el) => (stepRefs.current[i] = el)}
-
-            />
-
-
-            <h2>Tell us about your organization.</h2>
-            <p>
-              Help us better understand your needs by providing the following
-              information.
-            </p>
-            <div className="form-grid">
-              <div>
-                <label>Name of Organization*</label>
-                <input
-                  name="organizationName"
-                  value={formData.organizationName}
-                  onChange={handleChange}
-                  placeholder="Organization Name"
-                />
-              </div>
-              <div>
-                <label>Number of physicians in your organization*</label>
-                <input
-                  name="physicians"
-                  value={formData.physicians}
-                  onChange={handleChange}
-                  placeholder="Number"
-                />
-              </div>
-              <div>
-                <label>Type of organization (optional)</label>
-                <select
-                  name="organizationType"
-                  value={formData.organizationType}
-                  onChange={handleChange}
-                >
-                  <option value="">Select type</option>
-                  <option value="Hospital">Hospital</option>
-                  <option value="Clinic">Clinic</option>
-                  <option value="Private Practice">Private Practice</option>
-                </select>
-              </div>
-              <div>
-                <label>
-                  When will you evaluate new solution(s)? (optional)
-                </label>
-                <select
-                  name="evaluationTime"
-                  value={formData.evaluationTime}
-                  onChange={handleChange}
-                >
-                  <option value="">Select time</option>
-                  <option value="Immediately">Immediately</option>
-                  <option value="Within 3 months">Within 3 months</option>
-                  <option value="Later">Later</option>
-                </select>
-              </div>
-            </div>
-            <p className="policy">
-              By submitting your information, you agree to our{" "}
-              <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>.
-            </p>
-            <button className="submit" type="submit" disabled={!isStep3Valid}>
-              Submit Form
-            </button>
-          </form>
+          
+                step = {step}
+                formData={formData}
+                handleChange={handleChange}
+                isStep3Valid={isStep3Valid}
+                handleSubmit={handleSubmit}
+          
+          />
         )}
       </div>
     </div>
