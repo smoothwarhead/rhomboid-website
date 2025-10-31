@@ -1,6 +1,11 @@
 import React from "react";
 
-const SelectField = ({ label, name, options, required }) => (
+const SelectField = (props) => {
+
+
+  const { label, name, options, required } = props;
+  
+  return (
   <div className="select-field">
     <label htmlFor={name}>
       {label}
@@ -15,6 +20,6 @@ const SelectField = ({ label, name, options, required }) => (
       ))}
     </select>
   </div>
-);
+)};
 
 export default SelectField;
