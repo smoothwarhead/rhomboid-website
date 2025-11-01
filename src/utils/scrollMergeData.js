@@ -172,3 +172,26 @@ export const smallRevealData = [
     text: "Make it easy for patients to manage their health with digital access to care information, appointment scheduling, and bill pay options while reducing work for your team.",
   },
 ];
+
+
+export const midRevealData = [
+  {
+    for: "EHR FOR MEDIUM TO LARGE MEDICAL GROUPS",
+    btnText: "Explore our EHR",
+    title: "Boost clinician efficiency and satisfaction",
+    text: "Improve the clinical experience and provider-patient interactions with streamlined workflows and proactive patient record sharing.",
+
+  },
+  {
+    for: "PATIENT ENGAGEMENT",
+    btnText: "Discover the RhomboidPatient app",
+    title: "Increase patient satisfaction and collections",
+    text: "Reduce staff work while improving patient payments with digital tools that provide easy access to health information and payment options.",
+  },
+  {
+    for: "RHOMBOID HEALTH NETWORK",
+    btnText: "Learn about our network",
+    title: "Make data exchange and care delivery easier",
+    text: "Close more care gaps and improve outcomes with a network that enables clinical and financial data to flow freely across care settings and payers.",
+  },
+];

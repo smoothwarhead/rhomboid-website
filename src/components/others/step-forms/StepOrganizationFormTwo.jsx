@@ -1,4 +1,6 @@
 import InputField from "../../globals/forms/input/InputField";
+import FormSelect from "../../globals/forms/select/form-select/FormSelect";
+import SelectField from "../../globals/forms/select/SelectField";
 import { stepFormInput2 } from "../../globals/prd-section/prd-data";
 import ProgressIndicator from "../multi-step-form/ProgressIndicator";
 
@@ -41,14 +43,23 @@ const StepOrganizationFormTwo = (props) => {
 
         <>
           {stepFormInput2.slice().splice(-2).map((input, index) => (
-          <InputField
-            key={index}
-            value={formData[input.name]}
-            onChange={handleChange}
-            required={input.validate}
-            inputType="text"
-            {...input}
-          />
+
+            <FormSelect 
+              key={index}
+              options={input.options}
+              {...input}
+              // placeholder={input.placeholder}
+
+            />
+          // <SelectField
+          //   key={index}
+          //   value={formData[input.name]}
+          //   onChange={handleChange}
+          //   required={input.validate}
+          //   // inputType="text"
+          //   {...input}
+          //   options={input.options}
+          // />
         ))}
         </>
       

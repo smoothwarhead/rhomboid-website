@@ -88,7 +88,7 @@ export const navItems = [
                     {
                         title: "Medium to Large Medical Groups",
                         text: "",
-                        link: "/who-we-serve/medium-to-large-medical-groups"
+                        link: "/who-we-serve/medium-large-medical-practices"
 
                     },
                     {

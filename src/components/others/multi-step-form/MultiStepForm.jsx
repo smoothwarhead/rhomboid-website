@@ -233,7 +233,6 @@ const MultiStepForm = () => {
         {/* STEP 3 */}
         {step === 3 && (
           <StepOrganizationFormTwo 
-
           
                 step = {step}
                 formData={formData}

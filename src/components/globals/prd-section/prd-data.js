@@ -1,4 +1,25 @@
 
+const organizationTypeData = [
+    
+    "Hospital and Health Systems",
+    "Employers",
+    "Medical Practice",
+    "Digital Health",
+    "FQHC",
+    "Partners",
+    "Specialty Organization",
+    "Startup Medical Practice",
+    "Payers"
+]
+
+const evaluationTimeData = [
+    "Less than 3 months from now",
+    "3-6 months from now",
+    "7-12 months from now",
+    "12+ months from now",
+    "None of these apply"
+    
+]
 
 export const stepFormData = [
     {
@@ -130,24 +151,29 @@ export const stepFormInput2 = [
     {
         
         name: "organizationType",
-        placeholder: "Type of organization (optional)",
+        placeholder: "Select type",
         label: "Type of organization (optional)",
         isPassword: false,
         validate: true,
         errorMessage: "Please enter a valid email address",
-        validate: false
+        validate: false,
+        options: organizationTypeData
         
 
     },
     {
        
         name: "evaluationTime",
-        placeholder: "When will you actively evaluate new solution(s) (optional)",
+        placeholder:     "Select time",
         label: "When will you actively evaluate new solution(s) (optional)",
         isPassword: false,
         errorMessage: "The password field cannot be empty.",
-        validate: false
+        validate: false,
+        options: evaluationTimeData
+
 
     },
 
 ];
+
+
