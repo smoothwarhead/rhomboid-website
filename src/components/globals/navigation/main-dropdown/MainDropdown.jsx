@@ -6,7 +6,7 @@ import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import NavContext from '../../../../context/NavContext';
 
 
-const MainDropdown = forwardRef(({ contents }, ref, innerRef) => {
+const MainDropdown = forwardRef(({ contents }, ref) => {
 
     const { setOpenMenu } = useContext(NavContext);
     
@@ -51,7 +51,7 @@ const MainDropdown = forwardRef(({ contents }, ref, innerRef) => {
 
   return (
     <div className='main-dropdown' ref={ref}>
-        <div className="main-slide" ref={innerRef}>
+        <div className="main-slide">
             <div className="main-slide-con">
                 
                 <div className="main-slide-con-top">
