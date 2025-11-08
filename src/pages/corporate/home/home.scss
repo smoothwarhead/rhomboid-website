@@ -113,7 +113,7 @@
 
     .join-section {
         width: 100%;
-        background-color: variables.$green;
+        background: variables.$gradient;
         height: 30vh;
         color: #fff;
 
@@ -140,6 +140,7 @@
             }
 
         }
+        
     }
 
 }
