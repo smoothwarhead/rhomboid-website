@@ -95,7 +95,7 @@ const MainNav = () => {
       <div className="main-nav" ref={navRef}>
         <div className="main-nav-con">
           <div className="main-nav-logo">
-            <Link>
+            <Link to="/">
               <img src={NavLogo} alt="company-logo" />
               <span className="main-nav-logo-text">RHOMBOID HEALTH</span>
             </Link>

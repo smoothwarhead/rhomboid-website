@@ -8,6 +8,7 @@ import Startup from '../pages/corporate/startup/Startup'
 import { NavProvider } from '../context/NavContext'
 import SmallMedical from '../pages/corporate/small-medical/SmallMedical'
 import MediumToLarge from '../pages/corporate/medium-to-large/MediumToLarge'
+import EnterpriseSystem from '../pages/corporate/enterprise-system/EnterpriseSystem'
 
 const CorporateRouter = () => {
   return (
@@ -19,6 +20,7 @@ const CorporateRouter = () => {
             <Route path='/who-we-serve/startup-practices' element={ <Startup /> } />
             <Route path='/who-we-serve/small-medical-practices' element={ <SmallMedical/> } />
             <Route path='/who-we-serve/medium-large-medical-practices' element={ <MediumToLarge /> } />
+            <Route path='/who-we-serve/enterprises-and-health-systems' element={ <EnterpriseSystem /> } />
         </Route>
     </Routes>
   )

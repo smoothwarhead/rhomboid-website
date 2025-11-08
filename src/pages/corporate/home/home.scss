@@ -1,0 +1,145 @@
+@use "../../../styles/variables";
+@use "sass:map";
+
+
+
+.homepage {
+
+    width: 100%;
+
+
+    .hero-section {
+        position: relative;
+        width: 100%;
+        min-height: 90vh;
+        background: url("./dna.png") no-repeat center center;
+        background-size: cover;
+        display: flex;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.05);
+            z-index: 1;
+        }
+
+        .hero-content {
+            display: flex;
+            // justify-content: space-between;
+            // align-items: flex-start;
+            gap: 4rem;
+            width: map.get(variables.$layout-width, "l");
+            margin: auto;
+
+            @media (max-width: 900px) {
+                flex-direction: column;
+                gap: 3rem;
+            }
+        }
+
+        .hero-left {
+            flex: 1;
+
+            h1 {
+                font-size: 54px;
+                font-weight: 600;
+                line-height: 1.3;
+                color: #677294;
+                margin-bottom: 40px;
+
+                .green {
+                    color: #1a7b5d;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 2rem;
+                }
+            }
+
+            .get-started-btn {
+                background: variables.$green;
+                color: #fff;
+
+            }
+
+        }
+
+        .hero-right {
+
+            flex: 1.1;
+
+            .description {
+                color: #000;
+                line-height: 1.7;
+                margin-bottom: 80px;
+                font-size: 18px;
+                letter-spacing: 1px;
+            }
+
+            .benefits {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.7rem;
+                    padding: 0.8rem 0;
+                    border-bottom: 1px solid #c6c7c9;
+                    font-size: 18px;
+                    color: #333;
+                    font-weight: 500;
+
+                    .icon {
+                        color: #677294;
+                        font-size: 24px;
+                        flex-shrink: 0;
+                    }
+
+                    &:hover {
+                        color: #1a7b5d;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .join-section {
+        width: 100%;
+        background-color: variables.$green;
+        height: 30vh;
+        color: #fff;
+
+        h4 {
+            display: block;
+            width: 40%;
+            font-style: italic;
+            font-size: 32px;
+            line-height: 1.7em;
+        }
+
+        .join-section-con {
+            width: map.get(variables.$layout-width, "l");
+            margin: 0 auto;
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+
+            .join-btn {
+                width: 45%;
+                display: flex;
+                align-items: center;
+
+            }
+
+        }
+    }
+
+}

@@ -1,4 +1,10 @@
-import { FaFacebookF, FaLinkedinIn, FaYoutube, FaXTwitter, FaSquareInstagram } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaYoutube,
+  FaXTwitter,
+  FaSquareInstagram,
+} from "react-icons/fa6";
 import { FaDesktop } from "react-icons/fa";
 import { HiOutlineCalendar } from "react-icons/hi2";
 import { IoLogoFacebook } from "react-icons/io5";
@@ -10,7 +16,6 @@ const Footer = () => {
       <section className="help-section">
         <h2>Let us help you</h2>
         <div className="help-cards">
-
           <div className="help-card help-card-1">
             {/* <div className="help-icon">💻</div> */}
             <FaDesktop />
@@ -28,7 +33,6 @@ const Footer = () => {
             <p>Submit a request, and we’ll schedule a brief call.</p>
             <button>Schedule a demo today</button>
           </div>
-
         </div>
       </section>
 
@@ -83,16 +87,19 @@ const Footer = () => {
 
       {/* Social Section */}
       <section className="social-section">
-        <h4>Follow Us</h4>
-        <div className="social-icons">
-          <FaSquareInstagram />
-          <IoLogoFacebook />
-          <FaXTwitter />
-          <FaLinkedinIn />
-          <FaYoutube />
+        <div className="social-section-con">
+          <p>Rhomboid Health © 2025 All Rights Reserved</p>
+          <div className="socials">
+            <span>Follow Us:</span>
+            <div className="icons">
+              <FaFacebookF />
+              <FaXTwitter />
+              <FaLinkedinIn />
+              <FaYoutube />
+            </div>
+          </div>
         </div>
       </section>
-
     </footer>
   );
 };

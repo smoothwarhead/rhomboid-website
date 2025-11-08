@@ -176,22 +176,47 @@ export const smallRevealData = [
 
 export const midRevealData = [
   {
-    for: "EHR FOR MEDIUM TO LARGE MEDICAL GROUPS",
+    for: "EHR FOR SMALL PRACTICES",
     btnText: "Explore our EHR",
-    title: "Boost clinician efficiency and satisfaction",
-    text: "Improve the clinical experience and provider-patient interactions with streamlined workflows and proactive patient record sharing.",
+    title: "Increase efficiency and ease",
+    text: "Tailorable workflows reduce documentation time, freeing you to focus on delivering care and growing your practice.",
+
+  },
+  {
+    for: "PATIENT ENGAGEMENT",
+    btnText: "Explore patient engagement services",
+    title: "Connect with patients more easily",
+    text: "Reduce no-shows, increase collections, and close care gaps faster with automated reminders and tailored messaging.",
+  },
+  {
+    for: "PATIENT EXPERIENCE",
+    btnText: "Explore patient engagement services",
+    title: "Tools that empower while relieving work",
+    text: "Make it easy for patients to manage their health with digital access to care information, appointment scheduling, and bill pay options while reducing work for your team.",
+  },
+];
+
+
+export const enterpriseRevealData = [
+  
+ {
+    for: "ENTERPRISE EHR",
+    btnText: "Explore our EHR",
+    title: "The optimal EHR for ambulatory care",
+    text: "Attract and retain clinicians with intuitive workflows designed for the ambulatory experience and robust record sharing across care settings.",
 
   },
   {
     for: "PATIENT ENGAGEMENT",
     btnText: "Discover the RhomboidPatient app",
-    title: "Increase patient satisfaction and collections",
-    text: "Reduce staff work while improving patient payments with digital tools that provide easy access to health information and payment options.",
+    title: "Build patient loyalty and collections",
+    text: "Drive higher patient satisfaction with easy-to-use tools that offer access to healthcare information, appointment scheduling, and flexible payment options.",
   },
   {
-    for: "RHOMBOID HEALTH NETWORK",
+    for: "STAFFING SERVICES",
     btnText: "Learn about our network",
-    title: "Make data exchange and care delivery easier",
-    text: "Close more care gaps and improve outcomes with a network that enables clinical and financial data to flow freely across care settings and payers.",
+    title: "Staffing help wherever you need it",
+    text: "Limit disruptions and improve performance with experienced support staff who can seamlessly fill situational demands and deliver exceptional results.",
+    
   },
 ];
