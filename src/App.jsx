@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 
-import { BrowserRouter } from 'react-router'
+import { BrowserRouter, HashRouter } from 'react-router'
 import './App.css'
 import { getApp } from './utils/helpers'
 
@@ -14,11 +14,11 @@ function App() {
   return (
     
       <div className={'container'}>
-        <BrowserRouter>
+        <HashRouter>
 
          <CurrentApp />
          
-        </BrowserRouter>
+        </HashRouter>
       </div>
   )
 }
