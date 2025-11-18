@@ -1,0 +1,121 @@
+@use "../../../styles/variables";
+@use "sass:map";
+
+
+
+
+.w-page {
+    width: 100%;
+    font-size: 18px;
+
+   
+}
+
+.hero-section {
+    width: map.get(variables.$layout-width, "l");
+    margin: 40px auto;
+}
+
+.w-mid-page {
+    width: map.get(variables.$layout-width, "l");
+
+    margin: 30px auto;
+
+
+    h3 {
+        width: 70%;
+        font-size: 48px;
+        font-weight: 600;
+        text-align: center;
+        margin: 40px auto;
+    }
+
+    .w-m-text {
+        display: block;
+        color: #000;
+        text-align: left;
+        // font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+
+
+
+}
+
+
+.vision-section {
+    width: 100%;
+    background: variables.$light-green;
+    margin-top: 50px;
+    padding: 40px;
+
+
+    .texts {
+        width: 50%;
+        margin: auto;
+
+    }
+
+    h3 {
+        font-size: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 28px;
+        text-align: center;
+        font-weight: 600;
+
+    }
+}
+
+
+.believe-section {
+    width: 100%;
+    background: variables.$gradient;
+    color: #fff;
+    margin-top: 40px;
+
+
+    .believe-section-con {
+        width: map.get(variables.$layout-width, "l");
+        margin: auto;
+        padding: 40px 0;
+
+        .texts {
+            width: 50%;
+            margin: auto;
+
+            .text-p {
+                text-align: center;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+
+            .text-h {
+                text-align: center;
+                font-size: 28px;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+
+            .text-span {
+                display: block;
+                text-align: center;
+                margin-bottom: 60px;
+                font-weight: 500;
+
+            }
+
+        }
+
+
+
+    }
+
+
+}

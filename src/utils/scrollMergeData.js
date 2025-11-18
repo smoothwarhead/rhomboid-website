@@ -1,3 +1,7 @@
+import { BsBarChart } from "react-icons/bs";
+import { FaAward, FaBalanceScale, FaUsers } from "react-icons/fa";
+import { FaHandsClapping } from "react-icons/fa6";
+import { MdOutlineAccessibilityNew } from "react-icons/md";
 
 
 
@@ -151,6 +155,82 @@ export const startupMergeData = [
  
 ];
 
+export const whoMergeData = [
+  {
+    hasIcon: true,
+
+    left: {
+    
+      icon: FaBalanceScale,
+      title: "Act with intergrity",
+      text: "We strive to be open, honest, ethical, and fair in everything we do."
+    },
+    
+    right: {
+      icon: FaUsers,
+      title: "Obsess over customers",
+      text: "We give our customers our very best in every encounter. Their success is our success.",
+
+    }
+      
+  },
+
+  {    
+    hasIcon: true,
+
+    left: {  
+      icon: FaAward,
+      title: "Strive for excellence",
+      text: "We continuously look for new ways to improve our performance and the value we deliver"
+    },
+    
+    right: {
+      icon: FaHandsClapping,
+      title: "Be a team player",
+      text: "Together we can achieve more than any of us could individually",
+
+    }
+   
+  },
+  {  
+    hasIcon: true,
+
+    left: { 
+      icon: BsBarChart,
+      title: "Make a difference",
+      text: "We have the courage to transform the lives of our colleagues, clients, and partners."
+    },
+    
+    right: {
+      icon: FaUsers,
+      title: "Value everyone",
+      text: "We achieve our potential by unlocking the full power of our communities and teams.",
+
+    }
+   
+  },
+  {   
+    hasIcon: true,
+
+    left: {  
+      icon: FaHandsClapping,
+      title: "Be accountable",
+      text: "We honor our commitments, take ownership of our work, and learn from our mistakes."
+    },
+
+       
+    right: {
+      icon: MdOutlineAccessibilityNew,
+      title: "Accessibilty",
+      text: "We leverage innovative digital solutions to bridge gaps in care, simplify the patient journey, and empower individuals with timely, reliable medical support.",
+
+    }
+
+  },
+
+ 
+];
+
 export const smallRevealData = [
   {
     for: "EHR FOR SMALL PRACTICES",
@@ -217,6 +297,31 @@ export const enterpriseRevealData = [
     btnText: "Learn about our network",
     title: "Staffing help wherever you need it",
     text: "Limit disruptions and improve performance with experienced support staff who can seamlessly fill situational demands and deliver exceptional results.",
+    
+  },
+];
+
+
+export const fqhcRevealData = [
+  
+ {
+    for: "",
+    btnText: "Explore RhomboidPatient",
+    title: "Mobile patient access",
+    text: "Empower patients to manage appointments, securely communicate with their care team, and more from their mobile device with the RhomboidPatient app.",
+
+  },
+  {
+    for: "",
+    btnText: "How we serve Specialties",
+    title: "Specialty-specific support",
+    text: "Be prepared for current and future expanding care capabilities with tailorable workflows and integrated support for a variety of specialty-specific needs.",
+  },
+  {
+    for: "",
+    btnText: "Explore Rhomboid Bridge Dental",
+    title: "Dental support",
+    text: "Receive true support for providing dental care from pre-payment capability and insurance coverage data entry through intuitive treatment plan creation.",
     
   },
 ];

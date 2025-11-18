@@ -1,0 +1,177 @@
+@use "../../../styles/variables";
+@use "sass:map";
+
+
+
+
+.page-dropdown-section {
+    width: 100%;
+    padding: 20px 0;
+
+
+    h3 {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        color: variables.$green;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+    h2 {
+
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+
+    .faq {
+        background: #fff;
+        color: #fff;
+
+
+        // Tabs
+        &__tabs {
+            display: flex;
+            gap: 12px;
+            width: fit-content;
+            margin: 20px auto;
+        }
+
+        &__tab {
+            padding: 10px 22px;
+            background: #fff;
+            border: 1px solid variables.$green;
+            border-radius: 10px;
+            color: variables.$green;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-size: 16px;
+            font-weight: 600;
+
+
+            &.active {
+                background: variables.$green;
+                color: #fff;
+            }
+
+            &:hover {
+                background: #3e867b;
+                color: #fff;
+            }
+        }
+
+
+        .contents {
+
+            background: variables.$green;
+            margin-top: 40px;
+
+
+
+            .contents-con {
+
+                width: map.get(variables.$layout-width, "l");
+                margin: auto;
+                padding: 60px 0 100px 0;
+                display: flex;
+                gap: 100px;
+
+
+
+                // Title
+                .faq__title {
+                    font-size: 32px;
+                    font-weight: 600;
+                    font-style: italic;
+                    margin-bottom: 40px;
+                }
+
+                // Main content block
+                .faq__content {
+                    margin-bottom: 40px;
+                    font-size: 16px;
+                    max-width: 600px;
+                    line-height: 1.5;
+                }
+
+                // FAQ Items
+                .faq__list {
+                    max-width: 700px;
+
+
+                    .faq__item {
+                        border-bottom: 1px solid #ffffff44;
+                        padding: 18px 0;
+                        overflow: hidden;
+                        transition: 0.3s ease;
+
+                    }
+
+                    .faq__question {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        width: 100%;
+                        background: none;
+                        border: none;
+                        color: #fff;
+                        font-size: 24px;
+                        cursor: pointer;
+                        text-align: left;
+                        font-family: "Montserrat";
+
+                    }
+
+                    .faq__icon {
+                        width: 30px;
+                        height: 30px;
+                        border: 2px solid #A6D1D7;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 16px;
+                        transition: 0.3s;
+                    }
+
+                    .faq__answer {
+                        overflow: hidden;
+                        max-height: 0;
+                        transition: max-height 0.35s ease-in-out;
+                        padding-left: 40px;
+
+                        p {
+                            margin-top: 12px;
+                            line-height: 1.5;
+                        }
+                    }
+
+                    .faq__item--open {
+                        .faq__icon {
+                            background: #fff;
+                            color: #3e867b;
+                        }
+                    }
+                }
+
+
+            }
+
+
+        }
+
+
+
+
+
+
+    }
+
+
+
+}

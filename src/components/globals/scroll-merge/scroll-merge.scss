@@ -1,150 +1,226 @@
-  @use "../../../styles/variables";
-  @use "sass:map";
+@use "../../../styles/variables";
+@use "sass:map";
 
 
-  .merge-section {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      height: fit-content;
-      overflow: visible;
-      margin-bottom: 60px;
+.merge-section {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: fit-content;
+    overflow: visible;
+    margin-bottom: 60px;
 
 
-      .left-box,
-      .right-box {
-          width: 48%;
-          height: 40vh;
-          padding: 50px;
-          border-radius: 8px;
-          transition: 0.3s;
-      }
+    .left-box,
+    .right-box {
+        width: 48%;
+        height: 40vh;
+        padding: 50px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
 
 
 
 
 
-      .left-box {
-          background: #ffffff;
+    .left-box {
+        background: #ffffff;
 
-          text-align: left;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          position: relative;
-          border: 0.5px solid variables.$green;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        border: 0.5px solid variables.$green;
 
-          h4 {
-              color: variables.$green;
-              font-size: 40px;
-              font-weight: 600;
-              text-align: left;
-          }
+        h4 {
+            color: variables.$green;
+            font-size: 40px;
+            font-weight: 600;
+            text-align: left;
+        }
 
         span {
             //   color: variables.$green;
             font-size: 18px;
             font-weight: 400;
             text-align: left;
-          }
+        }
 
 
 
-      }
+    }
 
-      .right-box {
-          background: variables.$green;
-          margin-top: 5%;
+    .right-box {
+        background: variables.$green;
+        margin-top: 5%;
 
-          z-index: 1;
-          color: #fff;
+        z-index: 1;
+        color: #fff;
 
-            h4 {
+        h4 {
 
-              font-size: 40px;
-              font-weight: 600;
-              text-align: left;
-              margin-bottom: 40px;
-          }
+            font-size: 40px;
+            font-weight: 600;
+            text-align: left;
+            margin-bottom: 40px;
+        }
 
-          span {
+        span {
 
-              font-size: 18px;
-              font-weight: 400;
-              line-height: 32px;
-              text-align: left;
-          }
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+        }
 
-      }
-
-
-
-      .big-left-box {
-          width: 42%;
-          height: fit-content;
-          padding: 40px 40px 80px 40px;
-          border-radius: 8px;
-          transition: 0.3s;
-          background: #fff;
-
-          position: relative;
-          border: 0.5px solid variables.$green;
-          color: variables.$green;
-
-
-          h4 {
-              font-size: 40px;
-              font-weight: 600;
-              text-align: left;
-              margin-bottom: 40px;
-
-          }
-
-          span {
-              //   color: variables.$green;
-              font-size: 18px;
-              font-weight: 400;
-              text-align: left;
-          }
-
-      }
-
-
-      .big-right-box {
-          width: 55%;
-          height: fit-content;
-          padding: 40px;
-          border-radius: 8px;
-          transition: 0.3s;
-          background: variables.$green;
-          margin-top: 5%;
-          color: #fff;
-          z-index: 1;
-
-          h4 {
-
-              font-size: 40px;
-              font-weight: 600;
-              text-align: left;
-              margin-bottom: 40px;
-          }
-
-          span {
-
-              font-size: 18px;
-              font-weight: 400;
-              line-height: 32px;
-              text-align: left;
-          }
-
-      }
+    }
 
 
 
+    .big-left-box {
+        width: 42%;
+        height: fit-content;
+        padding: 40px 40px 80px 40px;
+        border-radius: 8px;
+        transition: 0.3s;
+        background: #fff;
+
+        position: relative;
+        border: 0.5px solid variables.$green;
+        color: variables.$green;
+
+
+        h4 {
+            font-size: 40px;
+            font-weight: 600;
+            text-align: left;
+            margin-bottom: 40px;
+
+        }
+
+        span {
+            //   color: variables.$green;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: left;
+        }
+
+    }
+
+
+    .big-right-box {
+        width: 55%;
+        height: fit-content;
+        padding: 40px;
+        border-radius: 8px;
+        transition: 0.3s;
+        background: variables.$green;
+        margin-top: 5%;
+        color: #fff;
+        z-index: 1;
+
+        h4 {
+
+            font-size: 40px;
+            font-weight: 600;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        span {
+
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+        }
+
+    }
+
+
+    .icon-left-box,
+    .icon-right-box {
+        width: 48%;
+        height: fit-content;
+        padding: 50px;
+        border-radius: 8px;
+        transition: 0.3s;
+        color: #fff;
+         display: flex;
+        flex-direction: column;
+        gap: 30px;
+        // justify-content: flex-start;
+
+        // align-items: center;
+
+        .box-icon{
+            
+            svg{
+                font-size: 2.5em;
+            }
+        }
+
+    }
+
+
+    .icon-left-box {
+        background: transparent;
+
+        text-align: left;
+       
+        position: relative;
+        border: 0.5px solid variables.$light-green;
+
+        h4 {
+            font-size: 40px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        span {
+            //   color: variables.$green;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: left;
+        }
+
+
+
+    }
+
+
+
+    .icon-right-box {
+        background: transparent linear-gradient(111deg, #47695C 0%, #063F29 100%) 0% 0% no-repeat padding-box;
+        margin-top: 5%;
+
+        z-index: 1;
+        // color: #fff;
+
+        h4 {
+
+            font-size: 40px;
+            font-weight: 600;
+            text-align: left;
+            // margin-bottom: 40px;
+        }
+
+        span {
+
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+        }
+
+    }
 
 
 
 
 
 
-  }
+
+}

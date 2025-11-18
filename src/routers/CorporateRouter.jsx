@@ -9,6 +9,9 @@ import { NavProvider } from '../context/NavContext'
 import SmallMedical from '../pages/corporate/small-medical/SmallMedical'
 import MediumToLarge from '../pages/corporate/medium-to-large/MediumToLarge'
 import EnterpriseSystem from '../pages/corporate/enterprise-system/EnterpriseSystem'
+import Fqhc from '../pages/corporate/fqhc/Fqhc'
+import Contact from '../pages/corporate/contact/Contact'
+import WhoWeAre from '../pages/corporate/who-we-serve/WhoWeAre'
 
 const CorporateRouter = () => {
   return (
@@ -21,6 +24,10 @@ const CorporateRouter = () => {
             <Route path='/who-we-serve/small-medical-practices' element={ <SmallMedical/> } />
             <Route path='/who-we-serve/medium-large-medical-practices' element={ <MediumToLarge /> } />
             <Route path='/who-we-serve/enterprises-and-health-systems' element={ <EnterpriseSystem /> } />
+            <Route path="/who-we-serve/federally-qualified-health-center" element={ <Fqhc /> } />
+            <Route path="/who-we-serve/federally-qualified-health-center" element={ <Fqhc /> } />
+            <Route path="/about/contact-us" element={ <Contact /> } />
+            <Route path="/about/who-we-are" element={ <WhoWeAre /> } />
         </Route>
     </Routes>
   )
