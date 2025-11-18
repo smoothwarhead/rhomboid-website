@@ -49,7 +49,7 @@ const WhoWeAre = () => {
 
   return (
     <div className="w-page">
-      <section className="hero-section">
+      <section className="w-hero-section">
         <PageHero
           p="Who we are"
           h2="Rhomboid health is curing complexity to simplify the practice of care"
