@@ -3,6 +3,25 @@ import PRACTICE from "../pages/corporate/home/desktop.png";
 import PATIENT from "../pages/corporate/home/phones.png";
 import CUSTOMER from "../pages/corporate/home/d_img.jpg";
 
+export const patientSignIn = [
+  {
+    name: "email",
+    placeholder: "Email",
+    label: "Email",
+    isPassword: false,
+    errorMessage: "Please enter a valid email",
+    validate: true,
+  },
+  {
+    name: "password",
+    placeholder: "Password",
+    label: "Password",
+    isPassword: true,
+    errorMessage: "Please enter a Password",
+    validate: true,
+  },
+];
+
 export const features = [
   {
     title: "EHR",
@@ -124,7 +143,8 @@ export const contactDropdownData = {
             "You can reset your rhomboidBridge password here at any time.",
         },
         {
-          title: "I’d like to connect with rhomboid health. How can I contact you?",
+          title:
+            "I’d like to connect with rhomboid health. How can I contact you?",
           content:
             "You can create a case or call under the Support menu in rhomboidBridge, or access our success community here—you’ll be able to choose a help category to find answers to your inquiries. You’ll need to login to rhomboidBridge to connect.",
         },
@@ -133,7 +153,6 @@ export const contactDropdownData = {
           content:
             "Thankfully, our downtimes are infrequent, The site updates in real-time to display any rhomboid bridge alerts for our various services.",
         },
-        
       ],
       contentHeading: "You might be wondering",
       note: "",
@@ -147,10 +166,161 @@ export const contactDropdownData = {
           content:
             "You’ll need to contact your medical provider’s office directly for the correct web address of your patient portal. They can also provide you with instructions on how to register and log in if you need them. If you have additional patient and portal related questions, please visit our patient resources page.",
         },
-        
       ],
       contentHeading: "You might be wondering",
       note: "",
     },
   ],
 };
+
+
+export const PatientCreateInput1 = [
+
+    {
+        
+        name: "firstName",
+        placeholder: "First Name",
+        label: "First Name",
+        isPassword: false,
+        errorMessage: "Please enter a first name",
+        validate: true
+
+
+        
+    },
+    {
+       
+        name: "lastName",
+        placeholder: "Last Name",
+        label: "Last Name",
+        isPassword: false,
+        errorMessage: "Please enter a last name",
+        validate: true
+
+
+
+    },
+    {
+        
+        name: "email",
+        placeholder: "Email",
+        label: "Email",
+        isPassword: false,
+        validate: true,
+        errorMessage: "Please enter a valid email address",
+        validate: true
+
+
+    },
+    {
+       
+        name: "phoneNumber",
+        placeholder: "Phone Number",
+        label: "Phone Number",
+        isPassword: false,
+        errorMessage: "The phone number field cannot be empty.",
+        validate: true
+
+    },
+
+];
+
+export const PatientCreateInput2 = [
+  {
+    name: "password",
+    placeholder: "Password",
+    label: "Password",
+    isPassword: true,
+    errorMessage: "Please enter a Password",
+    validate: true,
+  },
+  {
+    name: "confirmPassword",
+    placeholder: "Confirm Password",
+    label: "Confirm Password",
+    isPassword: true,
+    errorMessage: "Please enter matching Password",
+    validate: true,
+  },
+
+];
+
+
+export const organizationInput1 = [
+
+    {
+        
+        name: "institutionName",
+        placeholder: "Institution name",
+        label: "Institution Name",
+        isPassword: false,
+        errorMessage: "Please enter a name",
+        validate: true
+
+
+        
+    },
+    {
+       
+        name: "businessNumber",
+        placeholder: "Business Number",
+        label: "Business Number",
+        isPassword: false,
+        errorMessage: "Please enter a valid business number",
+        validate: true,
+        hint: "CAC issued business registration number"        
+
+
+
+    },
+    {
+        
+        name: "email",
+        placeholder: "Email",
+        label: "Email",
+        isPassword: false,
+        validate: true,
+        errorMessage: "Please enter a valid email address",
+        validate: true
+
+
+    },
+    {
+       
+        name: "phoneNumber",
+        placeholder: "Phone Number",
+        label: "Phone Number",
+        isPassword: false,
+        errorMessage: "The phone number field cannot be empty.",
+        validate: true
+
+    },
+
+];
+
+
+export const professionals = [
+  "General practitioner",
+  "Surgeon",
+  "Nurse",
+  "Psychiatrist",
+  "Oncologists",
+  "Radiologist",
+  "Midwife",
+  "Pediatrician",
+  "Gyneacologist",
+  "Dentist",
+  "Pediatrician",
+]
+
+export const healthInstitutions = [
+  "Hospital",
+  "Nursing home",
+  "Nurse",
+  "Pharmacy",
+  "Dialysis center",
+  "Telehealth",
+  "Mental health facility",
+  "Diagnostic center",
+  
+]

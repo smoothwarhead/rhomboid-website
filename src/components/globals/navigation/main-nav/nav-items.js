@@ -199,7 +199,7 @@ export const navItems = [
                     {
                         title: "Patient Portal Login",
                         text: "",
-                        link: "/resources/patient-portal-login"
+                        link: "http://account.localhost:5173/patient"
 
                     },
                     {

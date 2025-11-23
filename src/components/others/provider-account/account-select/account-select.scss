@@ -1,0 +1,135 @@
+@use "../../../../styles/variables";
+@use "sass:map";
+
+.s-account-header {
+    justify-content: space-between;
+
+    span {
+        font-weight: 500;
+    }
+
+    a {
+        width: fit-content;
+        padding: 3px 10px;
+        border: 1px solid #c5c4c4;
+        color: #000;
+        border-radius: 10px;
+
+        &:hover {
+            background: #d5d4d4;
+        }
+    }
+}
+
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.option-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #dcdddc;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    background: #fff;
+
+    &:hover {
+        border-color: variables.$ehr-blue;
+    }
+
+    &.active {
+        border-color: variables.$ehr-blue;
+        background: #F0F7F8;
+    }
+
+    .left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .icon-check {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            .icon {
+                font-size: 1.8rem;
+                color: variables.$ehr-blue;
+            }
+
+            .check-icon {
+                font-size: 1.5rem;
+                color: variables.$ehr-blue;
+            }
+        }
+
+
+        .text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+
+            h3 {
+
+                font-size: 1.1rem;
+                font-weight: 600;
+
+
+                &.active {
+                    color: variables.$ehr-blue;
+
+                }
+            }
+
+            p {
+
+                font-size: 14px;
+
+            }
+        }
+
+    }
+
+
+}
+
+
+.s-account-btn {
+    width: 100%;
+    margin-top: 40px;
+
+    a {
+        width: 100%;
+        display: block;
+        padding: 0.9rem;
+        background: variables.$ehr-blue;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.25s ease;
+
+        &:hover {
+            background: variables.$ehr-dark-blue;
+        }
+    }
+
+}

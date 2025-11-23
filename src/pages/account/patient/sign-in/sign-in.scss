@@ -1,0 +1,223 @@
+@use "../../../../styles/variables";
+@use "sass:map";
+
+
+
+.signin-container {
+  width: map.get(variables.$layout-width, "2");
+  margin: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow-y: hidden; 
+
+
+  .signin-left {
+    width: 50%;  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    
+
+    .logo-section {
+      text-align: left;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+
+      .rh-logo {
+        width: 12%;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        font-weight: 600;
+        color: variables.$dark-green;
+      }
+    }
+
+    .permissions {
+      margin-top: 60px;
+
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      ul {
+        list-style: disc;
+        padding-left: 20px;
+
+        li {
+          margin-bottom: 10px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .signin-right {
+    width: 50%;
+    padding: 60px 40px;
+
+    .signup-header {
+      background: #fff;
+      border: 1px solid variables.$light-green;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      font-size: 14px;
+      border-radius: 10px 10px 0 0;
+      padding: 8px 20px;
+
+      .sign-up-btn {
+        padding: 6px 18px;
+        border: 1px solid #c7c7c7;
+        background: white;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 13px;
+
+       
+
+        &:hover {
+          background: #f0f0f0;
+        }
+      }
+
+
+       a{
+          color: #000;
+          font-weight: 500;
+        }
+    }
+
+    .signin-card {
+      margin-top: 5px;
+      border: 1px solid variables.$light-green;
+      border-radius: 14px;
+      padding: 40px 40px 80px 40px;
+      background: #ffffff;
+
+      .login-btn {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background: #E7E9E3;
+
+
+        img {
+          width: 25px;
+          height: 25px;
+          
+        }
+      }
+
+   
+      .email {
+        margin-top: 20px;
+        background: #ffffff;
+        border: 1px solid #dcdcdc;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+
+
+
+        svg {
+          margin-left: 10px;
+          font-size: 2em;
+        }
+      }
+
+      .terms {
+        font-size: 12px;
+        margin-top: 40px;
+        text-align: center;
+        color: #454545;
+        line-height: 1.5;
+
+        a {
+          color: #5720c5;
+          text-decoration: underline;
+        }
+      }
+
+
+      .back-arrow{
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 60px;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+
+        svg{
+          font-size: 1.5em;
+        }
+
+
+      }
+
+      .patient-inputs{
+        width: 100%;
+        
+        .patient-input{
+          background: #E7E9E3;
+          border: none;
+          border-radius: 10px;
+
+        }
+      }
+
+      .sign-in-btn{
+        width: 100%;
+        padding: 10px 20px;
+        background: variables.$green;
+        margin-top: 40px;
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover{
+          background: variables.$dark-green;
+
+        }
+
+
+      }
+
+
+
+
+    }
+  }
+
+}

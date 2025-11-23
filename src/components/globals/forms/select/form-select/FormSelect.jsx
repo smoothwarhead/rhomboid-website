@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 
 const FormSelect = (props) => {
 
-    const { options, label, placeholder } = props;
+    const { options, label, placeholder, cName } = props;
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("");
   const [dropUp, setDropUp] = useState(false);
@@ -44,7 +44,7 @@ const FormSelect = (props) => {
 
 
   return (
-    <div className="custom-select" ref={dropdownRef}>
+    <div className={`custom-select ${cName}`} ref={dropdownRef}>
 
 
         <label>{label}</label> 

@@ -9,6 +9,7 @@ import NavContext from "../../../../context/NavContext";
 const MainNav = () => {
 
   const { openMenu, setOpenMenu } = useContext(NavContext);
+  const [activeLink, setActiveLink] = useState(null);
 
   const dropdownRefs = useRef({});
   const navRef = useRef(null);
@@ -32,6 +33,7 @@ const MainNav = () => {
     const handleClickOutside = (e) => {
       if (navRef.current && !navRef.current.contains(e.target)) {
         closeAllMenus();
+        setActiveLink(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -48,6 +50,7 @@ const MainNav = () => {
     const isOpen = openMenu === menu;
 
     setOpenMenu(isOpen ? null : menu);
+    setActiveLink(menu);
 
     Object.keys(dropdownRefs.current).forEach((key) => {
       // console.log(isOpen, menu, key);
@@ -104,7 +107,7 @@ const MainNav = () => {
           <div className="main-nav-right">
             {navItems.map((nav, i) => (
               <span key={i} className="nav-items">
-                <span className="nav-item" onClick={() => toggleMenu(nav.item)}>
+                <span className={`nav-item ${activeLink === nav.item ? "active-link" : ""}`} onClick={() => toggleMenu(nav.item)}>
                   {nav.item}
                 </span>
 

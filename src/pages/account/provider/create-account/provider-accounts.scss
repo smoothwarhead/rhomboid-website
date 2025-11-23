@@ -1,0 +1,47 @@
+@use "../../../../styles/variables";
+@use "sass:map";
+
+.account-scroll-section {
+    overflow-y: scroll;
+    height: 85vh;
+
+
+    &::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #dfdede;
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: variables.$ehr-blue;
+        border-radius: 10px;
+    }
+
+
+    .p-account-select{
+        width: 100%;
+        margin-bottom: 20px;
+
+        .select-header{
+            border: 1px solid variables.$light-green;
+            border-radius: 10px;
+
+        }
+
+    }
+
+
+    .e-btn{
+        background: variables.$ehr-blue;
+        margin-top: 40px;
+
+        &:hover{
+            background: variables.$ehr-dark-blue;
+
+        }
+
+    }
+}
