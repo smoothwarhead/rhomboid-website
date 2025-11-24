@@ -199,7 +199,7 @@ export const navItems = [
                     {
                         title: "Patient Portal Login",
                         text: "",
-                        link: "https://rhomboid-website.vercel.app/patient"
+                        link: "https://account.rhomboid-website.vercel.app/patient"
 
                     },
                     {
