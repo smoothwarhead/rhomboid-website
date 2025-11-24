@@ -30,6 +30,8 @@ const CorporateRouter = () => {
             <Route path="/about/contact-us" element={ <Contact /> } />
             <Route path="/about/who-we-are" element={ <WhoWeAre /> } />
             <Route path="/resources/patient-resources" element={ <PatientResources /> } />
+
+            
         </Route>
     </Routes>
   )

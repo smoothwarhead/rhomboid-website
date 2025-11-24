@@ -60,7 +60,7 @@ const Home = () => {
 
       <section className="join-section">
         <div className="join-section-con">
-          <h4>Join the other Nigeria Parctices using RhomboidBridge</h4>
+          <h4>Join the other Nigeria Practices using RhomboidBridge</h4>
 
           <div className="join-btn">
             <ActiveBtn text="Request a demo today" active={true} />
