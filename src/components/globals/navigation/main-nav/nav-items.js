@@ -199,7 +199,7 @@ export const navItems = [
                     {
                         title: "Patient Portal Login",
                         text: "",
-                        link: "http://account.localhost:5173/patient"
+                        link: "https://rhomboid-website.vercel.app/patient"
 
                     },
                     {
@@ -221,12 +221,12 @@ export const navItems = [
                         link: "/about/contact-us"
 
                     },
-                    {
-                        title: "Resources",
-                        text: "",
-                        link: "/resources/customer-resources"
+                    // {
+                    //     title: "Resources",
+                    //     text: "",
+                    //     link: "/resources/customer-resources"
 
-                    },
+                    // },
                     
                 ]
             },

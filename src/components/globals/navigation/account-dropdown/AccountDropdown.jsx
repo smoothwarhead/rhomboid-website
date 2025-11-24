@@ -47,12 +47,12 @@ const AccountDropdown = (props) => {
                     <LinkBtn
                         cName="a-link-btn"
                         text={`Patient login (RhomboidPatient login)`}
-                        to="http://account.localhost:5173/patient"
+                        to="https://rhomboid-website.vercel.app/patient"
                     />
                     <LinkBtn
                         cName="a-link-btn"
                         text={`Provider login (RhomboidBridge login)`}
-                        to="http://account.localhost:5173/"
+                        to="https://rhomboid-website.vercel.app"
 
                     />
                     {/* <Link>{`Patient login (RhomboidPatient login)`}</Link>

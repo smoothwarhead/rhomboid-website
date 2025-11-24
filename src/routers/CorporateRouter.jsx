@@ -12,6 +12,7 @@ import EnterpriseSystem from '../pages/corporate/enterprise-system/EnterpriseSys
 import Fqhc from '../pages/corporate/fqhc/Fqhc'
 import Contact from '../pages/corporate/contact/Contact'
 import WhoWeAre from '../pages/corporate/who-we-serve/WhoWeAre'
+import PatientResources from '../pages/corporate/patient-resources/PatientResources'
 
 const CorporateRouter = () => {
   return (
@@ -28,6 +29,7 @@ const CorporateRouter = () => {
             <Route path="/who-we-serve/federally-qualified-health-center" element={ <Fqhc /> } />
             <Route path="/about/contact-us" element={ <Contact /> } />
             <Route path="/about/who-we-are" element={ <WhoWeAre /> } />
+            <Route path="/resources/patient-resources" element={ <PatientResources /> } />
         </Route>
     </Routes>
   )

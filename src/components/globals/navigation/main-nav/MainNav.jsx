@@ -50,7 +50,7 @@ const MainNav = () => {
     const isOpen = openMenu === menu;
 
     setOpenMenu(isOpen ? null : menu);
-    setActiveLink(menu);
+    setActiveLink(isOpen ? null : menu);
 
     Object.keys(dropdownRefs.current).forEach((key) => {
       // console.log(isOpen, menu, key);
