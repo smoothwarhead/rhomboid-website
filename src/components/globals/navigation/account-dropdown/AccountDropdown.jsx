@@ -39,6 +39,8 @@ const AccountDropdown = (props) => {
         
     }, [openAccountDropdown]);
 
+    console.log(import.meta.env.VITE_RHOMBOID_ACCOUNT_URL)
+
   return (
         <div className='s-dropdown' ref={accountRef}>
             <div className="s-dropdown-con">
@@ -47,12 +49,12 @@ const AccountDropdown = (props) => {
                     <LinkBtn
                         cName="a-link-btn"
                         text={`Patient login (RhomboidPatient login)`}
-                        to="https://account.rhomboid-website.vercel.app/patient"
+                        to={`${import.meta.env.VITE_RHOMBOID_ACCOUNT_URL}/patient`}
                     />
                     <LinkBtn
                         cName="a-link-btn"
                         text={`Provider login (RhomboidBridge login)`}
-                        to="https://account.rhomboid-website.vercel.app"
+                        to={import.meta.env.VITE_RHOMBOID_ACCOUNT_UR}
 
                     />
                     {/* <Link>{`Patient login (RhomboidPatient login)`}</Link>

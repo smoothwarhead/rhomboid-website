@@ -28,9 +28,6 @@
 @use "../components/others/page-dropdown-section/page-dropdown-section.scss";
 @use "../components/globals/forms/select/form-select/form-select.scss";
 @use "../components/globals/navigation/header/account-header.scss";
-@use "../components/others/provider-account/account-intro/account-intro.scss";
-@use "../components/others/provider-account/account-select/account-select.scss";
-
 
 
 
@@ -39,12 +36,12 @@
 @use "../pages/corporate/contact/contact.scss";
 @use "../pages/corporate/startup/startup.scss";
 @use "../pages/corporate/home/home.scss";
-@use "../pages/account/patient/sign-in/sign-in.scss";
+
+
 @use "../pages/corporate/who-we-serve/who-we-are.scss";
-@use "../pages/account/account-home/account-home.scss";
+
 @use "../pages/corporate/small-medical/small-medical.scss";
-@use "../pages/account/patient/create-account/create-account.scss";
-@use "../pages/account/provider/create-account/provider-accounts.scss";
+
 @use "../pages/corporate/patient-resources/patient-resources.scss";
 
 

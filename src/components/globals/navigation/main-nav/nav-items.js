@@ -31,37 +31,8 @@ export const navItems = [
                 ]
             },
 
-            {
-                name: "Benefits of Rhomboid Bridge",
-                items: [
-                    {
-                        title: "Value-Based Care Support",
-                        text: "Boost care quality and streamline tracking, documentation, and reimbursement.",
-                        link: "/solutions/rhomboidbridge/value-based-care"
-
-                    },
-                    {
-                        title: "Interoperability",
-                        text: "Access the data you need, exactly when you need it, from across our connected network.",
-                        link: "/solutions/rhomboidbridge/interoperability"
-
-                    },
-                     {
-                        title: "Cost & Value",
-                        text: "We’re designed around one goal—your success.",
-                        link: "/solutions/rhomboidbridge/cost-and-value"
-
-                    },
-                     {
-                        title: "Customer Support",
-                        text: "Hands-on training and live support designed to empower you from day one.",
-                        link: "/solutions/rhomboidbridge/customer-support"
-
-                    }
-
-
-                ]
-            },
+           
+            
 
         ]
     },
@@ -106,84 +77,84 @@ export const navItems = [
                 ]
             },
 
-            {
-                name: "Medical Specialties",
-                items: [
-                    {
-                        title: "Behavioral Health & Psychiatrics",
-                        text: "",
-                        link: "/who-we-serve/behavioral-health-and-psychiatrics"
+            // {
+            //     name: "Medical Specialties",
+            //     items: [
+            //         {
+            //             title: "Behavioral Health & Psychiatrics",
+            //             text: "",
+            //             link: "/who-we-serve/behavioral-health-and-psychiatrics"
 
-                    },
-                    {
-                        title: "Orthopedics",
-                        text: "",
-                        link: "/who-we-serve/orthopedics"
+            //         },
+            //         {
+            //             title: "Orthopedics",
+            //             text: "",
+            //             link: "/who-we-serve/orthopedics"
 
-                    },
-                    {
-                        title: "Pediatrics",
-                        text: "",
-                        link: "/who-we-serve/pediatrics"
+            //         },
+            //         {
+            //             title: "Pediatrics",
+            //             text: "",
+            //             link: "/who-we-serve/pediatrics"
 
-                    },
-                    {
-                        title: "Women's Health",
-                        text: "",
-                        link: "/who-we-serve/women's-health"
+            //         },
+            //         {
+            //             title: "Women's Health",
+            //             text: "",
+            //             link: "/who-we-serve/women's-health"
 
-                    },
-                    {
-                        title: "Primary Care",
-                        text: "",
-                        link: "/who-we-serve/primary-care"
+            //         },
+            //         {
+            //             title: "Primary Care",
+            //             text: "",
+            //             link: "/who-we-serve/primary-care"
 
-                    },
-                ]
-            },
+            //         },
+            //     ]
+            // },
 
-            {
-                name: "Other Organizations",
-                items: [
-                    {
-                        title: "Healthcare Payers",
-                        text: "",
-                        link: "/who-we-serve/healthcare-payers"
+            // {
+            //     name: "Other Organizations",
+            //     items: [
+            //         {
+            //             title: "Healthcare Payers",
+            //             text: "",
+            //             link: "/who-we-serve/healthcare-payers"
 
-                    },
-                    {
-                        title: "Labs & Imaging Centers",
-                        text: "",
-                        link: "/who-we-serve/labs-and-imaging-centers"
+            //         },
+            //         {
+            //             title: "Labs & Imaging Centers",
+            //             text: "",
+            //             link: "/who-we-serve/labs-and-imaging-centers"
 
-                    },
-                    {
-                        title: "Pharmacies",
-                        text: "",
-                        link: "/who-we-serve/pharmacies",
+            //         },
+            //         {
+            //             title: "Pharmacies",
+            //             text: "",
+            //             link: "/who-we-serve/pharmacies",
 
 
-                    },
-                ]
-            },
+            //         },
+            //     ]
+            // },
 
-            {
-                name: "Partners",
-                items: [
-                    {
-                        title: "Marketplace Partners",
-                        text: "",
-                        link: "/who-we-serve/partners",
+            // {
+            //     name: "Partners",
+            //     items: [
+            //         {
+            //             title: "Marketplace Partners",
+            //             text: "",
+            //             link: "/who-we-serve/partners",
 
-                    },
-                    {
-                        title: "Developers",
-                        text: "",
-                        link: "/who-we-serve/developers",
+            //         },
+            //         {
+            //             title: "Developers",
+            //             text: "",
+            //             link: "/who-we-serve/developers",
 
-                    },
-                ]
-            },
+            //         },
+            //     ]
+            // },
 
         
         ]
