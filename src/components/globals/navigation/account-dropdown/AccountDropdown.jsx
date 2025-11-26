@@ -39,7 +39,7 @@ const AccountDropdown = (props) => {
         
     }, [openAccountDropdown]);
 
-    console.log(import.meta.env.VITE_RHOMBOID_ACCOUNT_URL)
+    // console.log(import.meta.env.VITE_RHOMBOID_ACCOUNT_URL)
 
   return (
         <div className='s-dropdown' ref={accountRef}>
@@ -49,12 +49,12 @@ const AccountDropdown = (props) => {
                     <LinkBtn
                         cName="a-link-btn"
                         text={`Patient login (RhomboidPatient login)`}
-                        to={`${import.meta.env.VITE_RHOMBOID_ACCOUNT_URL}/patient`}
+                        to={`https://account.rhomboidhealth.com/patient`}
                     />
                     <LinkBtn
                         cName="a-link-btn"
                         text={`Provider login (RhomboidBridge login)`}
-                        to={import.meta.env.VITE_RHOMBOID_ACCOUNT_UR}
+                        to="https://account.rhomboidhealth.com"
 
                     />
                     {/* <Link>{`Patient login (RhomboidPatient login)`}</Link>
